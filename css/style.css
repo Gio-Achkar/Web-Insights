@@ -1,0 +1,38 @@
+/* Style for each topic article container */
+.topic {
+  display: flex; /* Turns the article into a flex container to arrange children horizontally */
+  align-items: center; /* Vertically aligns the flex items (text & image) */
+  justify-content: space-between; /* Adds space between the text and image */
+  gap: 20px; /* Adds 20px spacing between text and image */
+  margin-bottom: 30px; /* Adds space below each topic article */
+  flex-wrap: wrap; /* Allows items to wrap onto a new line on smaller screens */
+}
+
+/* Style for the text part of each topic */
+.topic .text {
+  flex: 1 1 50%; /* Flex-grow: 1, Flex-shrink: 1, Base width: 50% of container */
+}
+
+/* Style for the image part of each topic */
+.topic .image {
+  flex: 1 1 40%; /* Flex-grow: 1, Flex-shrink: 1, Base width: 40% of container */
+}
+
+/* Style for the image inside the topic */
+.topic img {
+  width: 100%; /* Image fills its container's width */
+  max-width: 250px; /* never wider than 250px */
+  height: auto; /* Keeps the aspect ratio */
+  display: block; /* Removes extra space below image caused by inline-block default */
+}
+
+/* Mobile responsiveness: adjusts layout for smaller screens */
+@media (max-width: 768px) {
+  .topic {
+    flex-direction: column; /* Stack text and image vertically on small screens */
+  }
+  .topic .text,
+  .topic .image {
+    flex: 1 1 100%; /* Each takes full width of container when stacked */
+  }
+}
