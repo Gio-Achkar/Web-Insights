@@ -39,7 +39,221 @@
       <h1>Security on the Web</h1>
       <h2>Common risks &amp; safe practices.</h2>
       <hr />
-      <section id="security-importance"></section>
+      <section id="security-importance">
+        <h2>Why Does Security Matter?</h2>
+        <p>
+          The Internet stands as one of humanity's most influential creations
+          because it enables worldwide communication and information sharing.
+          The Internet provides numerous advantages to users but it also creates
+          substantial security threats. Websites contain diverse types of data,
+          which include non-sensitive content and sensitive information
+          including usernames, passwords, financial records, proprietary
+          algorithms, and private business details. Safeguarding this type of
+          information is the central objective of web security
+          <a href="references.html#ref9">[9]</a>.
+        </p>
+        <p>If information of this type is attacked:</p>
+        <ul>
+          <li>
+            The company faces a competitive disadvantage if proprietary
+            information is breached.
+          </li>
+          <li>
+            Services could face disruption, be disabled or hijacked which cause
+            operational or financial impact.
+          </li>
+          <li>
+            The personal information of customers could be exploited,
+            compromising personal privacy, consumer profiling, identity theft,
+            or even direct financial loss
+            <a href="references.html#ref9">[9]</a>.
+          </li>
+        </ul>
+        <p>
+          Web security has become increasingly important as cyber attacks have
+          continued to grow in frequency and cost. Cyber attacks had an
+          estimated cost to the global economy of $8 trillion in 2023, and that
+          is expected to increase to $10.5 trillion by 2025. Each day there are
+          approximately 2200 attacks, which indicates that organizations, users,
+          and digital assets all need good security
+          <a href="references.html#ref10">[10]</a>.
+        </p>
+        <p>
+          The severity of these threats is reinforced by studies that indicate
+          that more than 85% of websites are vulnerable to at least one type of
+          attack, which indicates the urgency of having good security
+          <a href="references.html#ref11">[11]</a>.
+        </p>
+      </section>
+      <section id="security-overview">
+        <h2>Overview of Web Security</h2>
+        <p>
+          Web security refers to the practices, technologies, and protocols that
+          protect websites, web applications, and online services from
+          unauthorized access, data breaches, and other attacks
+          <a href="references.html#ref10">[10]</a>. Web security aims to protect
+          sensitive information, IT systems, and the user community to keep the
+          web as secure as feasible. Practices and tools include secure
+          communications protocols such as HTTPS
+          <a href="references.html#ref9">[9]</a>, identity and access controls
+          that help ensure only authorized users can reach sensitive data,
+          system monitoring tools, firewalls to block unauthorized traffic and
+          isolate the local network from external environment, web filtering
+          tools to deny access to unsafe content, and antivirus software to
+          identify and remove malware <a href="references.html#ref11">[11]</a>.
+          Security measures also includes identity authentication using
+          multifactor authentication (MFA), encrypting data both while it moves
+          across networks (in transit) and when it is stored on servers or
+          databases (at rest), regularly identifying vulnerabilities, and
+          educating users of common threat actors such as phishing, along with
+          frequently monitoring the system to respond quickly to suspicious
+          activity <a href="references.html#ref10">[10]</a>. As cyberattacks
+          become more frequent, maintaining web security calls for proactive
+          measures and frequent updates to protect data and systems.
+        </p>
+      </section>
+      <section id="security-threats">
+        <h2>Common Web Threats</h2>
+        <p>
+          When discussing web threats, it's important to notice that many
+          attacks are successful because web applications either place too much
+          trust in data received from browsers or fail to handle it with enough
+          caution <a href="references.html#ref12">[12]</a>. The following are
+          some of the most common threats encountered on the web:
+        </p>
+        <ol>
+          <li>
+            <strong>Cross-Site Scripting (XSS):</strong><br />Malicious scripts
+            are injected by attackers into a reliable website, and users'
+            browsers execute them. This can lead users to dangerous websites,
+            steal cookies, or take over sessions. One of the most commonly
+            reported vulnerabilities in web applications in the past has been
+            XSS <a href="references.html#ref12">[12]</a>.
+          </li>
+          <li>
+            <strong>SQL Injection (SQLi):</strong><br />Attackers alter or
+            expose private data by manipulating input fields, such as search
+            boxes, login forms, or URL parameters, to send malicious commands to
+            a website's database. The database on the website may be destroyed
+            by SQL Injection <a href="references.html#ref13">[13]</a>.
+          </li>
+          <li>
+            <strong>Cross-Site Request Forgery (CSRF):</strong><br />By sending
+            requests that the website considers to be authentic, attackers
+            deceive a logged-in user into carrying out undesirable actions on
+            the website, like altering account settings or completing
+            transactions <a href="references.html#ref12">[12]</a>.
+          </li>
+          <li>
+            <strong>Broken Access Control and API Vulnerabilities:</strong
+            ><br />When a website or API fails to appropriately limit user
+            actions, it creates broken access control, which gives hackers
+            access to data or features that are not authorized. Attackers can
+            target microservices by altering JSON parameters, API keys, or other
+            data, or they can take advantage of authentication weaknesses in
+            contemporary API-first systems, where web services depend on APIs.
+            These flaws may also make it possible for attacks such as cross-site
+            request forgery (CSRF), in which programs do not confirm that users
+            intended particular actions
+            <a href="references.html#ref14">[14]</a>.
+          </li>
+          <li>
+            <strong>Phishing and Spam:</strong><br />Phishing is the practice of
+            tricking people into sharing passwords, credit card numbers, or
+            other private information by using phony websites, emails, or
+            messages <a href="references.html#ref15">[15]</a>. Spam frequently
+            aids phishing by spreading a lot of false information.
+          </li>
+          <li>
+            <strong>Malware Installation:</strong><br />Infected downloads,
+            advertisements, or links can covertly install malicious software on
+            a user's computer. Once operational, it has the ability to damage
+            files, track activities, and steal data.
+          </li>
+          <li>
+            <strong>Data Breaches:</strong><br />Unauthorized access to a
+            company's private data constitutes a data breach. Errors, inadequate
+            security, or intentional actions are frequently the cause of these
+            incidents. Financial losses, reputational damage to a business,
+            legal problems, and possible misuse of personal data are all
+            consequences of data breaches
+            <a href="references.html#ref10">[10]</a>.
+          </li>
+          <li>
+            <strong>Distributed Denial-of-Service (DDoS):</strong
+            ><br />Attackers use numerous compromised computer systems to flood
+            a website or server with traffic, rendering it unusable or sluggish
+            for authorized users <a href="references.html#ref16">[16]</a>.
+          </li>
+          <li>
+            <strong>Clickjacking:</strong><br />Attackers may conceal a
+            malicious link beneath a genuine button to fool users into clicking
+            on something different from what they see. A hidden page under the
+            attacker's control may be displayed when a user clicks on what looks
+            to be a trustworthy website
+            <a href="references.html#ref12">[12]</a>.
+          </li>
+          <li>
+            <strong>Cryptographic Failures:</strong><br />Sensitive information
+            may be exposed to hackers due to inadequate or badly executed
+            encryption. This includes failing to secure data during transmission
+            or storage, utilizing outdated algorithms, or storing keys in an
+            unsafe manner. These flaws make organizations extremely vulnerable
+            to increasingly complex attacks
+            <a href="references.html#ref14">[14]</a>.
+          </li>
+        </ol>
+      </section>
+      <section id="security-safe-practices">
+        <h2>Staying Secure Online</h2>
+        <p>
+          Protecting yourself or your organization from web threats requires a
+          combination of good practices, tools, and awareness. The following
+          strategies can help reduce risks and improve overall web security:
+        </p>
+        <ol>
+          <li>
+            <strong>Use Strong Authentication</strong><br />Use strong passwords
+            at all times, don't use the same ones for different accounts, and
+            whenever you can, turn on multifactor authentication (MFA).
+            Attackers find it more difficult to obtain unauthorized access as a
+            result <a href="references.html#ref12">[12]</a>.
+          </li>
+          <li>
+            <strong>Keep Software Up to Date</strong><br />To address known
+            vulnerabilities and prevent attacks, apply security patches and
+            updates on a regular basis <a href="references.html#ref11">[11]</a>.
+          </li>
+          <li>
+            <strong>Encrypt Sensitive Data</strong><br />Encrypt sensitive data
+            during transmission and storage, and use HTTPS for secure
+            communication. HTTPS is based on Transport Layer Security (TLS),
+            which encrypts data while it is being transmitted to guard against
+            third parties intercepting or abusing it. Use strong, modern
+            algorithms and safeguard cryptographic keys as well
+            <a href="references.html#ref9">[9]</a>.
+          </li>
+          <li>
+            <strong>Use Firewalls and Security Tools </strong><br />Use
+            intrusion detection systems, firewalls, antivirus programs, and
+            website filters to stop malicious traffic and stop malware
+            infections.
+          </li>
+          <li>
+            <strong>Infrastructure Resilience</strong><br />To promptly restore
+            systems in the event of DDoS attacks, put backup, logging, and
+            incident response plans into action.
+          </li>
+        </ol>
+      </section>
+      <section id="security-conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          Writing secure code, putting email authentication protocols into
+          place, educating users, increasing awareness, and more are examples of
+          additional safe practices.
+        </p>
+      </section>
     </main>
     <footer>
       <br /><br />
