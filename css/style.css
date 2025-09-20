@@ -1,38 +1,128 @@
-/* Style for each topic article container */
+/*fonts*/
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Horizontal menu */
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 1000;
+  margin: 0; /* remove any default margin */
+  padding: 0; /* remove any default padding */
+}
+
+/* Menu list styling */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0; /* remove default margin from ul */
+  padding: 0 20px; /* horizontal padding inside menu */
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* Menu links styling */
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 15px 10px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect */
+.menu a:hover,
+.menu a:focus {
+  background: #333;
+  color: #fff;
+}
+
+/* Push content below the fixed menu */
+body {
+  padding-top: 60px; /* adjust to match nav height */
+}
+
+/*Grid layout for articles - index.html*/
+.topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Individual topic block (clickable) */
 .topic {
-  display: flex; /* Turns the article into a flex container to arrange children horizontally */
-  align-items: center; /* Vertically aligns the flex items (text & image) */
-  justify-content: space-between; /* Adds space between the text and image */
-  gap: 20px; /* Adds 20px spacing between text and image */
-  margin-bottom: 30px; /* Adds space below each topic article */
-  flex-wrap: wrap; /* Allows items to wrap onto a new line on smaller screens */
+  display: block;
+  background: #f9f9f9; /* light card background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* removes underline if using <a> */
+  color: inherit; /* inherits text color */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-/* Style for the text part of each topic */
-.topic .text {
-  flex: 1 1 50%; /* Flex-grow: 1, Flex-shrink: 1, Base width: 50% of container */
+/* Hover effect */
+.topic:hover {
+  transform: translateY(-5px) scale(1.02); /* lift and subtle zoom */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background: #f0f8ff; /* light highlight background */
 }
 
-/* Style for the image part of each topic */
-.topic .image {
-  flex: 1 1 40%; /* Flex-grow: 1, Flex-shrink: 1, Base width: 40% of container */
+/* Topic headings */
+.topic h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  transition: color 0.2s ease;
 }
 
-/* Style for the image inside the topic */
+/* Hover heading color change */
+.topic:hover h3 {
+  color: #0077cc; /* accent color */
+}
+
+/* Topic paragraph */
+.topic p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Optional: topic images inside grid block */
 .topic img {
-  width: 100%; /* Image fills its container's width */
-  max-width: 250px; /* never wider than 250px */
-  height: auto; /* Keeps the aspect ratio */
-  display: block; /* Removes extra space below image caused by inline-block default */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-/* Mobile responsiveness: adjusts layout for smaller screens */
+/* Responsive tweaks (optional) */
 @media (max-width: 768px) {
-  .topic {
-    flex-direction: column; /* Stack text and image vertically on small screens */
-  }
-  .topic .text,
-  .topic .image {
-    flex: 1 1 100%; /* Each takes full width of container when stacked */
+  .topics {
+    grid-template-columns: 1fr; /* stack blocks on smaller screens */
   }
 }
