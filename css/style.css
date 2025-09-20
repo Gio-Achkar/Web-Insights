@@ -146,6 +146,8 @@ main li {
 .bibliography li {
   counter-increment: ref-counter;
   margin-bottom: 0.5em;
+  scroll-margin-top: 80px; /* Offset this element by the height of the fixed menu so that 
+                              when a link to it is clicked, the element is not hidden behind the menu */
 }
 
 .bibliography li::before {
