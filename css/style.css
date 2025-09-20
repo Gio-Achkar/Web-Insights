@@ -126,3 +126,29 @@ body {
     grid-template-columns: 1fr; /* stack blocks on smaller screens */
   }
 }
+
+/* ol and li styling */
+main ol {
+  padding-left: 20px;
+}
+
+main li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* bibliography styling */
+.bibliography {
+  list-style: none; /* remove default numbering */
+  counter-reset: ref-counter;
+}
+
+.bibliography li {
+  counter-increment: ref-counter;
+  margin-bottom: 0.5em;
+}
+
+.bibliography li::before {
+  content: "[" counter(ref-counter) "] ";
+  font-weight: bold;
+}
