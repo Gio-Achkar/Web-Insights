@@ -212,3 +212,81 @@ tfoot a {
 tfoot a:hover {
   text-decoration: underline;
 }
+
+/* Three-column layout */
+.text-image-block.three-columns {
+  display: flex;
+  gap: 20px; /* space between text and images */
+  align-items: flex-start;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+/* Text column */
+.text-image-block.three-columns .text-column {
+  flex: 1;
+  min-width: 250px; /* prevent text from being too narrow */
+}
+
+/* Images column */
+.text-image-block.three-columns .images-column {
+  flex: 1;
+  display: flex;
+  flex-direction: row; /* images side by side */
+  gap: 20px; /* space between images */
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.images-column figure:first-child {
+  flex: 1; /* NeXT */
+}
+
+.images-column figure:last-child {
+  flex: 3; /* Tim */
+}
+
+/* Each figure */
+.text-image-block.three-columns .images-column figure {
+  flex: 1; /* equal width for images */
+  margin: 0;
+  text-align: center;
+}
+
+/* Images */
+.text-image-block.three-columns img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Figcaption */
+.text-image-block.three-columns figcaption {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .text-image-block.three-columns {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .text-image-block.three-columns .text-column,
+  .text-image-block.three-columns .images-column {
+    width: 100%;
+    flex: none;
+  }
+
+  .text-image-block.three-columns .images-column {
+    flex-direction: row; /* images side by side on mobile */
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .text-image-block.three-columns .images-column figure {
+    flex: 1;
+  }
+}
