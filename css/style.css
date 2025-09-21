@@ -1,14 +1,4 @@
 /*fonts*/
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("fonts/PlayfairDisplay-Regular.woff2") format("woff2");
-}
-
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ecf0f1; /* Main content background */
@@ -37,7 +27,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Playfair Display", serif;
+  font-family: "Merriweather", serif;
 }
 
 /* Horizontal menu */
