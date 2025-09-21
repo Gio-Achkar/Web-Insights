@@ -52,6 +52,7 @@ header nav {
   justify-content: flex-start;
   flex-wrap: nowrap;
   overflow-x: auto; /* allow horizontal scroll */
+  overflow-y: hidden; /* avoid vertical scrollbars */
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
