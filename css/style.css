@@ -154,3 +154,61 @@ main li {
   content: "[" counter(ref-counter) "] ";
   font-weight: bold;
 }
+
+/* Styling for 2 Tables in Stats Page */
+.tables-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between the two tables */
+  flex-wrap: wrap; /* stack vertically if screen is too narrow */
+  margin: 20px 0;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mena-table {
+  width: 650px;
+}
+
+.lebanon-table {
+  width: 650px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tfoot td {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 6px;
+}
+
+tfoot a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+tfoot a:hover {
+  text-decoration: underline;
+}
