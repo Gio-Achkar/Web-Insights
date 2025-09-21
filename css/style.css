@@ -290,3 +290,25 @@ tfoot a:hover {
     flex: 1;
   }
 }
+
+/* Layout for text + image blocks (image to the right) */
+.text-image-block.image-right {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.text-image-block.image-right p {
+  flex: 2; /* text takes more space */
+  padding-top: 50px; /* move text down */
+}
+
+.text-image-block.image-right figure {
+  flex: 1; /* image takes less space */
+  margin: 0;
+}
+
+.text-image-block.image-right img {
+  width: 100%;
+  height: auto;
+}
