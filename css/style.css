@@ -213,6 +213,15 @@ tfoot a:hover {
   text-decoration: underline;
 }
 
+/* General figcaption styling for all figures */
+figcaption {
+  font-size: 0.9em; /* slightly larger than 0.85rem; you can adjust */
+  color: #555; /* consistent gray color */
+  margin-top: 5px; /* spacing above caption */
+  text-align: center; /* center captions */
+  font-weight: 600;
+}
+
 /* Three-column layout */
 .text-image-block.three-columns {
   display: flex;
@@ -259,14 +268,6 @@ tfoot a:hover {
   border-radius: 8px;
 }
 
-/* Figcaption */
-.text-image-block.three-columns figcaption {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 5px;
-  text-align: center;
-}
-
 /* Responsive: stack vertically on small screens */
 @media (max-width: 768px) {
   .text-image-block.three-columns {
@@ -311,4 +312,31 @@ tfoot a:hover {
 .text-image-block.image-right img {
   width: 100%;
   height: auto;
+}
+
+/* Centers figures with captions, makes images responsive, and adds spacing */
+.centered-figure {
+  margin: 20px auto; /* vertical spacing + center horizontally */
+  text-align: center; /* centers caption text */
+  max-width: 90%; /* optional: prevent image from being too wide */
+}
+
+.centered-figure img {
+  max-width: 60%; /* responsive image */
+  height: auto; /* maintain aspect ratio */
+}
+
+.centered-figure figcaption {
+  font-size: 1.1em; /* slightly larger than default */
+}
+
+.full-width-figure {
+  margin: 20px 0; /* vertical spacing */
+  text-align: center; /* centers caption if added */
+}
+
+.full-width-figure img {
+  width: 100%; /* takes full width of container/screen */
+  height: auto; /* maintains aspect ratio */
+  display: block; /* removes small inline spacing */
 }
