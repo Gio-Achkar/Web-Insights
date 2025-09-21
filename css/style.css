@@ -51,6 +51,8 @@ header nav {
   padding: 0 20px; /* horizontal padding inside menu */
   justify-content: flex-start;
   flex-wrap: nowrap;
+  overflow-x: auto; /* allow horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
 /* Menu links styling */
@@ -60,6 +62,7 @@ header nav {
   color: #2c3e50;
   font-weight: 600;
   padding: 15px 10px;
+  flex: 0 0 auto; /* prevents shrinking, keeps width */
   white-space: nowrap;
   transition: background 0.2s, color 0.2s;
 }
