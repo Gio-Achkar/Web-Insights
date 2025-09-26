@@ -41,6 +41,21 @@ h4 {
   font-family: "Merriweather", serif;
 }
 
+/* Main page header overrides */
+.main-header h1 {
+  font-size: 2.5rem;
+}
+
+.main-header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(210, 20%, 35%);
+}
+
+main section h2 {
+  font-weight: 600;
+}
+
 /* Horizontal menu */
 header nav {
   position: fixed;
@@ -57,7 +72,7 @@ header nav {
   /* Menu list styling */
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 2.2rem;
   margin: 0; /* remove default margin from ul */
   padding: 0 1.25rem; /* horizontal padding inside menu */
   justify-content: flex-start;
@@ -353,4 +368,27 @@ figcaption {
   .round-image-corners {
     border-radius: 0.625rem; /* less rounding on mobile */
   }
+}
+
+/* Styling for preformatted text */
+pre {
+  font-family: monospace; /* better font for code */
+  font-size: 1.1rem; /* slightly larger */
+  font-weight: 600; /* semi-bold */
+  color: hsl(0, 0%, 9%); /* black text */
+  padding: 0.5rem 1rem; /* extra horizontal padding */
+  border-left: 4px solid hsl(0, 0%, 9%); /* subtle gray highlight */
+}
+
+/* Custom bullet points for CSS at-rules list */
+ul.at-rules {
+  list-style-type: none; /* remove default bullets */
+  padding-left: 1rem; /* spacing from left */
+}
+
+ul.at-rules li::before {
+  content: "→";
+  color: hsl(210, 100%, 20%);
+  font-weight: bold;
+  margin-right: 0.5rem; /* space between arrow and text */
 }

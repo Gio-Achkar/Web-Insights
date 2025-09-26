@@ -13,7 +13,7 @@
     <meta name="author" content="Gio Al Achkar" />
     <meta
       name="keywords"
-      content="Extra research, HTML versions, CSS history, Web development, Web standards, Research questions"
+      content="CSS rules, CSS at-rules, @import, @media, @font-face, @keyframes, @supports, @layer, HTML 5.2, HTML Living Standard, web standards, responsive design, web development"
     />
     <!-- For search engines -->
     <title>Extra Research | Web Insights</title>
@@ -34,19 +34,129 @@
           <li><a href="mobile-first.html">Mobile-First Development</a></li>
           <li><a href="stats.html">Internet Stats (MENA & Lebanon)</a></li>
           <li><a href="css-history.html">CSS History</a></li>
-          <li><a href="extra.html">Extra Research</a></li>
+          <li><a href="extra.html">Web Extras</a></li>
           <li><a href="references.html">References</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="main-header">
-        <h1>Extra Research</h1>
+        <h1>Web Extras</h1>
+        <h2>Additional Resources and Research Questions</h2>
         <br />
         <hr />
       </div>
-      <section></section>
+      <section id="extra-HTML-versions">
+        <h2>What is the latest version of HTML?</h2>
+        <p>
+          HTML 5.2, published by the World Wide Web Consortium (W3C) on December
+          14, 2017 <a href="references.html#ref32">[32]</a>, is the last
+          finalized version of HTML released as a W3C Recommendation. Work on
+          HTML 5.3 began afterward, but it was never completed or officially
+          released. As a result, there is no official “next version” of HTML,
+          such as HTML 6, and HTML 5.2 remains the latest formal snapshot by the
+          W3C.
+        </p>
+        <p>
+          The responsibility for maintaining the HTML specification has shifted
+          from W3C to the Web Hypertext Application Technology Working Group
+          (WHATWG), a consortium formed by leading browser companies, including
+          Apple, Google, Mozilla, and Microsoft
+          <a href="references.html#ref32">[32]</a>. WHATWG introduced the
+          concept of the HTML Living Standard, which is continuously updated to
+          reflect the latest features, improvements, and browser
+          implementations.
+        </p>
+        <p>
+          In May 2019, W3C and WHATWG signed a Memorandum of Understanding (MOU)
+          to collaborate on a single version of the HTML and DOM specifications.
+          This agreement formalized the transition: W3C no longer independently
+          publishes HTML standards and instead works to bring WHATWG Review
+          Drafts to W3C Recommendations. As part of this collaboration, W3C
+          retired its HTML specifications, including HTML 5.2, on January 28,
+          2021, in favor of the continuously evolving HTML Living Standard
+          maintained by WHATWG <a href="references.html#ref33">[33]</a>.
+        </p>
+      </section>
+
+      <section id="extra-CSS-rules">
+        <h2>What are CSS rules and how do they work?</h2>
+        <p>
+          CSS rules determine how web page elements are presented and
+          structured. Broadly, all CSS rules can be classified into two main
+          categories:
+        </p>
+        <ul>
+          <li>
+            <strong>Style rules: </strong>the standard rules most commonly used
+            in CSS. They consist of a selector, which identifies the HTML
+            element(s) to be styled, and a declaration block, which defines the
+            properties and values. <br />
+
+            <h4>Example:</h4>
+
+            <pre>
+  p {
+    color: blue;
+    font-size: 16px;
+  } 
+            </pre>
+            <p>
+              This rule sets the text color to blue and the font size to 16
+              pixels for all elements. Style rules also follow the concept of
+              specificity, which determines which rules take precedence when
+              multiple rules target the same element. Understanding specificity
+              is essential for avoiding conflicts and ensuring the intended
+              styles are applied.
+            </p>
+          </li>
+
+          <li>
+            <strong>At-rules: </strong>special instructions that start with the
+            @ symbol and extend CSS beyond basic styling, such as including
+            external stylesheets, applying conditional rules, or defining
+            animations. Key examples include:
+            <ul class="at-rules">
+              <li>
+                <em>@import:</em> allows including external style sheets. This
+                promotes modular and reusable CSS, though excessive use can slow
+                page loading.
+              </li>
+              <li>
+                <em>@media:</em> applies styles conditionally based on device
+                characteristics, such as screen size or orientation, enabling
+                responsive design across desktops, tablets, and mobile devices.
+              </li>
+              <li>
+                <em>@font-face:</em> lets designers embed custom fonts for
+                consistent typography across platforms.
+              </li>
+              <li>
+                <em>@keyframes:</em> defines animations by specifying how
+                element styles change over time.
+              </li>
+              <li>
+                <em>@supports:</em> applies styles only if the browser supports
+                certain CSS features, enhancing compatibility.
+              </li>
+              <li>
+                <em>@layer:</em> introduced recently to control the cascade and
+                prioritize certain sets of styles, improving maintainability of
+                complex CSS <a href="references.html#ref34">[34]</a>.
+              </li>
+            </ul>
+            <p>
+              At-rules give developers greater control over styling behavior,
+              resource management, and interactivity. While style rules
+              determine how elements look, at-rules dictate when, how, or from
+              where styles are applied, significantly expanding the flexibility
+              and power of CSS.
+            </p>
+          </li>
+        </ul>
+      </section>
     </main>
+
     <footer>
       <br /><br />
       <hr />
@@ -67,7 +177,7 @@
         </em>
       </p>
       <p>&copy; 2025 Web Insights | By Gio Al Achkar</p>
-      <p><em>Last updated: </em>September 20, 2025</p>
+      <p><em>Last updated: </em>September 25, 2025</p>
     </footer>
   </body>
 </html>
