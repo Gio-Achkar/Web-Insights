@@ -392,3 +392,57 @@ ul.at-rules li::before {
   font-weight: bold;
   margin-right: 0.5rem; /* space between arrow and text */
 }
+
+/* Text and image side by side with image on right */
+.text-image-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.text-image-right p {
+  flex: 1;
+  margin: 0;
+  min-width: 300px; /* Ensures text has minimum space before wrapping */
+}
+
+.float-right {
+  flex: 0 0 300px; /* Don't grow or shrink, fixed at 300px */
+  order: 2; /* Ensures image appears on the right */
+  margin: 0 10rem 0 0;
+}
+
+.float-right img {
+  width: 100%;
+  height: auto;
+  max-height: 260px; /* Limits the maximum height */
+  object-fit: cover; /* Maintains aspect ratio while cropping if needed */
+  display: block;
+  border-radius: 8px;
+}
+
+.float-right figcaption {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .text-image-right {
+    flex-direction: column;
+  }
+
+  .text-image-right p {
+    min-width: auto;
+  }
+
+  .float-right {
+    flex: none;
+    max-width: 250px;
+    margin: 1rem auto 0;
+    order: 1;
+  }
+}
