@@ -16,6 +16,11 @@ body {
   padding-top: 4rem; /* Push content below the fixed menu */
 }
 
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* Header styling */
 .main-header {
   text-align: center;
@@ -27,6 +32,15 @@ body {
 
 .main-header h2 {
   margin: 0.625rem 0 0 0;
+}
+
+hr {
+  margin-left: -60px;
+  margin-right: -60px;
+  padding: 0;
+  height: 1px;
+  border: none;
+  background-color: hsl(209, 16%, 42%);
 }
 
 /* Footer styling */
