@@ -110,7 +110,7 @@ header nav {
 /*Grid layout for articles - index.html*/
 .topics {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22.6rem, 1fr));
   gap: 1.25rem;
   margin: 1.25rem 0;
 }
