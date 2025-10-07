@@ -592,3 +592,118 @@ ul.at-rules li::before {
     left: 51px;
   }
 }
+
+/* Styling for interactive tool links */
+.interactive-tool {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  width: fit-content; /* Only as wide as content needs */
+  max-width: 500px; /* Prevents it from getting too wide */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interactive-tool:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tool-icon {
+  font-size: 32px;
+  margin-right: 20px;
+  opacity: 0.8;
+  flex-shrink: 0; /* Prevents icon from shrinking */
+}
+
+.tool-content {
+  white-space: nowrap; /* Keeps text compact */
+}
+
+.tool-content h4 {
+  margin: 0 0 4px 0;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tool-content p {
+  margin: 0 0 8px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.tool-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.tool-link:hover {
+  color: #1d4ed8;
+}
+
+.external-icon {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .interactive-tool {
+    width: 100%;
+    max-width: calc(100vw - 40px); /* Account for page margins */
+    margin: 20px auto;
+    padding: 14px;
+  }
+
+  .tool-content {
+    white-space: normal; /* Allow text wrapping on mobile */
+  }
+
+  .tool-icon {
+    font-size: 28px;
+    margin-right: 16px;
+  }
+
+  .tool-content h4 {
+    font-size: 15px;
+  }
+
+  .tool-content p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .tool-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-tool {
+    max-width: calc(100vw - 20px); /* Tighter margins on very small screens */
+    padding: 12px;
+  }
+
+  .tool-icon {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+
+  .tool-content h4 {
+    font-size: 14px;
+  }
+
+  .tool-content p {
+    font-size: 12px;
+  }
+
+  .tool-link {
+    font-size: 12px;
+  }
+}

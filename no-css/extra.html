@@ -151,6 +151,45 @@
           </li>
         </ul>
       </section>
+
+      <section>
+        <h2>Can URLs include non-Latin characters? How are they handled?</h2>
+        <p>
+          You can use non-Latin or Arabic words in a URL through
+          Internationalized Domain Names (IDNs) and Internationalized Resource
+          Identifiers (IRIs).
+        </p>
+        <p>
+          IDNs allow domain names (the “example.com” part) to include characters
+          from scripts such as Arabic, Chinese, or Japanese. Internally,
+          browsers convert these into Punycode, an ASCII-only representation, so
+          servers can process the address. For example, the Arabic domain
+          “مثال.إختبار” becomes “xn--mgbh0fb.xn--kgbechtv” when resolved
+          <a href="references.html#ref40">[40]</a>.
+        </p>
+        <p>
+          IRIs extend this support to the rest of the URL path, such as
+          directories or file names. Non-ASCII characters in the path are first
+          converted to UTF-8, then encoded using percent-encoding (e.g.,
+          “ملف_تجريبي.html” becomes
+          “%D9%85%D9%84%D9%81_%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A.html”) so
+          protocols like HTTP can transmit them safely
+          <a href="references.html#ref40">[40]</a>.
+        </p>
+        <p>
+          Overall, multilingual URLs make websites easier to read and remember
+          worldwide, and modern browsers ensure safe use by preventing confusion
+          or phishing.
+        </p>
+
+        <div class="tool-callout">
+          <h4>🔧 Try It Yourself</h4>
+          <p>See how Punycode and URL encoding work with your own text</p>
+          <a href="https://www.punycoder.com/" target="_blank">
+            Open Encoder Tool
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer>
