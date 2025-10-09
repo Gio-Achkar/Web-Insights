@@ -190,6 +190,45 @@
           </a>
         </div>
       </section>
+
+      <section>
+        <h2>
+          Does JavaScript Support Pre and Post Incrementation? What's the
+          Difference?
+        </h2>
+        <p>
+          In JavaScript, both pre-increment (++i) and post-increment (i++)
+          operators increase a variable's value by 1, but they do so at slightly
+          different times in the expression.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Pre-increment (++i)</strong> → increments the variable
+            before returning it.
+          </li>
+          <li>
+            <strong>Post-increment (i++)</strong> → returns the current value
+            first, then increments it afterward.
+          </li>
+        </ul>
+        <h3>Example:</h3>
+        <pre>
+      let i = 5;
+         console.log(++i); // prints 6 (increment first, then return)
+
+      let j = 5;
+         console.log(j++); // prints 5 (return first, then increment)
+        </pre>
+
+        <p>
+          For primitive values (like numbers), both perform almost the same.
+          <br />
+          However, when dealing with objects or arrays, i++ may create a
+          temporary copy before incrementing, which can cause a small
+          performance cost <a href="references.html#ref41">[41]</a>.
+        </p>
+      </section>
     </main>
 
     <footer>
