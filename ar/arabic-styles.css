@@ -1,0 +1,84 @@
+/* Reset and base font size */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px; /* larger font on bigger screens */
+  }
+}
+
+/* Body styling with RTL support */
+body {
+  font-family: "Noto Sans Arabic", sans-serif;
+  background-color: hsl(192, 15%, 94%); /* Same main background as English */
+  color: hsl(210, 29%, 24%); /* Same default text color */
+  direction: rtl; /* Right-to-left text direction */
+  text-align: right; /* Default right alignment for Arabic */
+  margin: 0;
+  padding: 20px; /* Add padding to prevent cutoff */
+  line-height: 1.6;
+}
+
+/* Header styling */
+.main-header {
+  text-align: center;
+  padding: 1.5rem 1rem 0 1rem;
+  margin: -20px -20px 2rem -20px; /* Extend header to full width */
+}
+
+.main-header h1 {
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: hsl(210, 29%, 24%);
+}
+
+.main-header h2 {
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(210, 20%, 35%);
+  margin: 0.625rem 0 0 0;
+}
+
+/* HR styling - adjusted for RTL */
+hr {
+  margin-left: -20px;
+  margin-right: -20px;
+  height: 1px;
+  border: none;
+  background-color: hsl(209, 16%, 42%);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* General heading fonts - Bold Noto Sans Arabic for distinction */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-weight: 700;
+}
+
+/* Paragraph styling - Regular weight for body text */
+p {
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Section styling to prevent cutoff */
+section {
+  margin: 1rem 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem 0 0 0;
+}
