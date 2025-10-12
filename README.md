@@ -23,6 +23,12 @@ Provide an educational, easy to navigate overview of essential web concepts (his
 - CSS History  
   How Cascading Style Sheets evolved and shaped modern web design.
 
+- JavaScript History  
+  From its creation in 1995 to its rise as the backbone of modern web development, this section covers key milestones, versions, and the evolution of JavaScript as a language that powers interactive web experiences.
+
+- History of Programming Languages (Arabic)  
+  This section, presented in Arabic, explores the origins and development of programming languages, tracing their evolution from early concepts in the 19th century to the modern languages that drive today’s computing.
+
 - Web Extras  
   This section provides extra research on web topics to give deeper insights into questions like the existence of HTML versions beyond HTML5.2 and the basics of CSS rules.
 
