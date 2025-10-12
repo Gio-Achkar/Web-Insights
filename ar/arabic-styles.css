@@ -26,6 +26,7 @@ body {
   text-align: center;
   padding: 1.5rem 1rem 0 1rem;
   margin: -20px -20px 2rem -20px; /* Extend header to full width */
+  position: relative; /* For absolute positioning of button */
 }
 
 .main-header h1 {
@@ -80,5 +81,199 @@ section {
 
 footer {
   text-align: center;
-  padding: 0.5rem 0 0 0;
+  padding: 0;
+}
+
+/* Section with image and text side by side */
+.section-with-image {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2rem 0 0 0;
+}
+
+.section-content {
+  flex: 1.5; /* Text space */
+  min-width: 0;
+}
+
+.section-content h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.section-content p {
+  margin: 0;
+}
+
+/* Section with multiple images side by side */
+.section-images {
+  display: flex;
+  flex-direction: row; /* Images side by side */
+  gap: 0.5rem;
+  flex: 1.2;
+  max-width: 400px;
+  margin: 0 0 0 4rem; /* Push images to the right */
+}
+
+.single-figure {
+  margin: 0;
+  text-align: center;
+  flex: 1; /* Each image takes equal space */
+}
+
+.single-figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.single-figure figcaption {
+  font-size: 0.75em;
+  color: hsl(0, 0%, 33%);
+  margin-top: 0.4rem;
+  text-align: center;
+  font-weight: 550;
+  line-height: 1.2;
+}
+
+.single-figure figcaption small {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.9em;
+  color: hsl(0, 0%, 50%);
+}
+
+.single-figure figcaption a {
+  color: hsl(210, 100%, 40%);
+  text-decoration: none;
+}
+
+.single-figure figcaption a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .section-with-image {
+    flex-direction: column;
+  }
+
+  .section-images {
+    max-width: 100%;
+    margin: 1rem 0 0 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .single-figure {
+    flex: 1;
+    max-width: 200px;
+  }
+
+  .single-figure img {
+    height: 150px; /* Smaller on mobile */
+  }
+}
+
+/* Section block styling */
+section {
+  background-color: hsl(220, 20%, 98%);
+  border: 1px solid hsl(220, 15%, 92%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for sections */
+section:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Section headings in blocks */
+section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: hsl(210, 40%, 20%); /* Darker bluish text */
+  border-bottom: 2px solid hsl(210, 50%, 85%); /* Light blue underline */
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraph spacing in blocks */
+section p {
+  margin-bottom: 1rem;
+  color: hsl(210, 20%, 25%);
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Special styling for image sections */
+.section-with-image {
+  background-color: hsl(200, 30%, 97%); /* Slightly different blue tint */
+  border: 1px solid hsl(200, 25%, 88%);
+}
+
+/* Mobile responsive for blocks */
+@media (max-width: 768px) {
+  section {
+    margin: 1.5rem 0.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+}
+
+section {
+  background-color: hsl(220, 20%, 98%);
+  border: 1px solid hsl(220, 15%, 92%);
+}
+
+/* Back button styling */
+.back-button {
+  position: absolute;
+  left: 1.5rem; /* Left side for RTL layout */
+  top: 1.5rem;
+  background-color: hsl(210, 50%, 85%);
+  color: hsl(210, 40%, 20%);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 2px solid hsl(210, 40%, 75%);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: hsl(210, 60%, 80%);
+  border-color: hsl(210, 50%, 65%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .back-button {
+    left: 1rem;
+    top: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .main-header {
+    padding-top: 3.5rem; /* More space for button on mobile */
+  }
 }
