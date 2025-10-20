@@ -241,6 +241,309 @@
           performance cost <a href="references.html#ref41">[41]</a>.
         </p>
       </section>
+
+      <section>
+        <h2>
+          What Are Regular Expressions? How Do They Work in JavaScript and
+          Python?
+        </h2>
+
+        <p>
+          A regular expression (or regex) is a sequence of characters that
+          defines a search pattern. It is used to find, match, replace, or
+          validate text, such as verifying an email address, extracting numbers,
+          or cleaning up data. <br />
+          Regex patterns are supported by most programming languages, and while
+          syntax details can vary, the main idea is to describe text patterns
+          precisely.
+        </p>
+
+        <p>
+          The following table summarizes the essential parts of regex syntax
+          used in most programming languages:
+        </p>
+
+        <table class="center-table">
+          <caption>
+            Core Concepts
+          </caption>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Meaning</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>.</td>
+              <td>Any single character</td>
+              <td>a.c → matches abc, axc</td>
+            </tr>
+            <tr>
+              <td>\d</td>
+              <td>Any digit (0-9)</td>
+              <td>\d\d → matches 42</td>
+            </tr>
+            <tr>
+              <td>\w</td>
+              <td>Word character (letters, digits, underscore)</td>
+              <td>\w+ → matches hello123</td>
+            </tr>
+            <tr>
+              <td>\s</td>
+              <td>Whitespace (space, tab, newline)</td>
+              <td>\s+ → matches multiple spaces</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>Start of a string</td>
+              <td>^Hi → matches strings starting with Hi</td>
+            </tr>
+            <tr>
+              <td>$</td>
+              <td>End of a string</td>
+              <td>end$ → matches strings ending with end</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>Zero or more repetitions</td>
+              <td>go* → matches g, go, goo</td>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>One or more repetitions</td>
+              <td>go+ → matches go, goo, gooo</td>
+            </tr>
+            <tr>
+              <td>?</td>
+              <td>Zero or one repetition (optional)</td>
+              <td>colou?r → matches color and colour</td>
+            </tr>
+            <tr>
+              <td>[abc]</td>
+              <td>Character set</td>
+              <td>Matches a, b, or c</td>
+            </tr>
+            <tr>
+              <td>|</td>
+              <td>Alternation (OR)</td>
+              <td>(abc|def) → matches abc or def</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          These symbols form the universal core of regex used across most
+          languages, including JavaScript and Python. Note that special
+          characters in regex need to be escaped with a backslash (\) to be
+          treated literally. For example, use \. to match a literal dot.
+        </p>
+
+        <h3>Regex in JavaScript</h3>
+        <p>
+          In JavaScript, regular expressions are objects that define patterns to
+          match character combinations in strings.<br />
+          They are commonly used with:
+        </p>
+
+        <ul>
+          <li><strong>RegExp</strong> methods: test() and exec().</li>
+          <li>
+            <strong>String</strong> methods: match(), matchAll(), replace(),
+            search(), and split() <a href="references.html#ref45">[45]</a>.
+          </li>
+        </ul>
+
+        <h4>Example:</h4>
+
+        <pre>
+
+const re1 = /ab+c/;  // Literal notation (compiled when the script loads)
+
+
+const re2 = new RegExp("ab+c");  // Constructor function (compiled at runtime)
+            </pre
+        >
+
+        <ul>
+          <li>Use the literal form for fixed patterns (faster performance).</li>
+          <li>
+            Use the constructor when building dynamic patterns (for example,
+            from user input).
+          </li>
+        </ul>
+
+        <p>
+          For more details, visit
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            MDN Web Docs: Regular Expressions in JavaScript </a
+          >.
+        </p>
+
+        <h3>Regex in Python</h3>
+
+        <p>
+          Python provides regex support through the built-in
+          <strong>re</strong> module.
+        </p>
+
+        <p>
+          The table below lists the main functions in Python's re module and
+          what each one does:
+        </p>
+
+        <table>
+          <caption>
+            Key re Functions
+          </caption>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>findall()</td>
+              <td>Returns a list of all matches</td>
+            </tr>
+            <tr>
+              <td>search()</td>
+              <td>Returns the first match object (if any)</td>
+            </tr>
+            <tr>
+              <td>split()</td>
+              <td>Splits a string where the pattern matches</td>
+            </tr>
+            <tr>
+              <td>sub()</td>
+              <td>Replaces matched text with another string</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" class="source">
+                Source:
+                <a
+                  href="https://www.w3schools.com/python/python_regex.asp"
+                  target="_blank"
+                  >W3Schools - Python RegEx</a
+                >
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <h4>Examples:</h4>
+
+        <pre>
+import re
+txt = "The rain in Spain"
+pattern = r"^The.*Spain$"
+result = re.search(pattern, txt)
+print(bool(result))  # True
+        </pre>
+
+        <pre>
+import re
+txt = "hello 123 world 456"
+numbers = re.findall(r"\d+", txt)
+print(numbers)  # ['123', '456']</pre
+        >
+
+        <p>
+          For more details, visit
+          <a
+            href="https://www.w3schools.com/python/python_regex.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            W3Schools: Python RegEx </a
+          >.
+        </p>
+
+        <div class="interactive-tool">
+          <div class="tool-icon">🧩</div>
+          <div class="tool-content">
+            <h4>Want to Experiment?</h4>
+            <p>Test and visualize your own regular expressions online</p>
+            <a
+              href="https://regex101.com/"
+              target="_blank"
+              rel="noopener"
+              class="tool-link"
+            >
+              Open Regex101 <span class="external-icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>How Do Websites Keep Your Passwords Secure?</h2>
+        <p>
+          When you type your password into a website or app, you might wonder if
+          someone behind the scenes can see it. In a secure system, no one, not
+          even the IT team, can view your actual password. This is because of a
+          process called <strong>hashing</strong>.
+        </p>
+        <p>
+          The hashing process involves using a hash function, which converts
+          your password into a fixed, seemingly random string of characters
+          known as a hash. This function is one-way, meaning it cannot be
+          reversed to reveal the original password.
+        </p>
+
+        <p>
+          Most modern systems also use a method called <strong>salting</strong>.
+          Salting is the process of adding a unique, random value (called a
+          salt) to a plaintext password before hashing it. This ensures that
+          even if two users choose the same password, their resulting hashes
+          will be completely different. Salting is important because it makes
+          several common attacks much harder to perform. These attacks include
+          <strong>dictionary attacks</strong> (using lists of common passwords),
+          <strong>rainbow table attacks</strong> (using precomputed hash
+          databases), and <strong>brute-force attacks</strong> (trying every
+          possible combination) <a href="references.html#ref46">[46]</a>.
+        </p>
+
+        <p>
+          Common hash functions include: <strong>MD5</strong>,
+          <strong>Bcrypt</strong>, <strong>Scrypt</strong>, and
+          <strong>Argon2</strong> <a href="references.html#ref46">[46]</a>. Each
+          algorithm has its own strengths and weaknesses, but all are designed
+          to securely store passwords.
+        </p>
+
+        <p>
+          When a user tries to log in, the system takes the entered password and
+          applies the same hashing process using the stored salt. It then
+          compares the new hash with the one saved in the database. If the two
+          hashes match, the password is verified and access is granted, all
+          without ever storing or revealing the actual password.
+        </p>
+
+        <div class="interactive-tool">
+          <div class="tool-icon">🔐</div>
+          <div class="tool-content">
+            <h4>See Hashing in Action</h4>
+            <p>Try generating a bcrypt hash using an online example tool.</p>
+            <a
+              href="https://bcrypt-generator.com/"
+              target="_blank"
+              rel="noopener"
+              class="tool-link"
+            >
+              Open Bcrypt Generator <span class="external-icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -263,7 +566,7 @@
         </em>
       </p>
       <p>&copy; 2025 Web Insights | By Gio Al Achkar</p>
-      <p><em>Last updated: </em>October 12, 2025</p>
+      <p><em>Last updated: </em>October 20, 2025</p>
     </footer>
   </body>
 </html>

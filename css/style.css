@@ -707,3 +707,10 @@ ul.at-rules li::before {
     font-size: 12px;
   }
 }
+
+/* Centering table class */
+.center-table {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
