@@ -387,6 +387,14 @@ section p:last-child {
   border: 2px solid hsl(210, 40%, 75%);
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInButton 0.35s ease-in 0.35s forwards;
+}
+
+@keyframes fadeInButton {
+  to {
+    opacity: 1;
+  }
 }
 
 .back-button:hover {

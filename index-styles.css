@@ -31,218 +31,291 @@ footer {
 
 /* Welcome Hub Styles */
 .welcome-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(to right, hsl(192, 15%, 94%) 20%, hsl(208, 32%, 85%) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    to right,
+    hsl(192, 15%, 94%) 20%,
+    hsl(208, 32%, 85%) 100%
+  );
 }
 
 .welcome-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    flex-shrink: 0;
-    border-bottom: 1px solid hsl(208, 32%, 76%);
+  text-align: center;
+  padding: 2rem 1rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid hsl(208, 32%, 76%);
 }
 
 .welcome-header h1 {
-    font-family: "Merriweather", serif;
-    font-size: 3.5rem;
-    color: hsl(210, 29%, 24%);
-    margin: 0;
-    margin-bottom: 0.5rem;
+  font-family: "Merriweather", serif;
+  font-size: 3.5rem;
+  color: hsl(210, 29%, 24%);
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: hsl(210, 20%, 35%);
-    margin: 0;
-    font-weight: 400;
+  font-size: 1.2rem;
+  color: hsl(210, 20%, 35%);
+  margin: 0;
+  font-weight: 400;
 }
 
 .split-container {
-    display: flex;
-    flex: 1;
-    min-height: 60vh;
-    overflow: hidden;
-    position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 60vh;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Independent center divider */
 .split-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background: hsl(208, 32%, 76%);
-    z-index: 5;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: hsl(208, 32%, 76%);
+  z-index: 5;
+  transform: translateX(-50%);
 }
 
 .split-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    cursor: pointer;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .left-section {
-    background: linear-gradient(45deg, hsl(192, 15%, 96%) 0%, hsl(192, 20%, 93%) 100%);
+  background: linear-gradient(
+    45deg,
+    hsl(192, 15%, 96%) 0%,
+    hsl(192, 20%, 93%) 100%
+  );
 }
 
 .right-section {
-    background: linear-gradient(45deg, hsl(208, 25%, 94%) 0%, hsl(208, 32%, 90%) 100%);
+  background: linear-gradient(
+    45deg,
+    hsl(208, 25%, 94%) 0%,
+    hsl(208, 32%, 90%) 100%
+  );
 }
 
 .section-content {
-    text-align: center;
-    padding: 2rem;
-    z-index: 2;
-    position: relative;
-    max-width: 400px;
+  text-align: center;
+  padding: 2rem;
+  z-index: 2;
+  position: relative;
+  max-width: 400px;
 }
 
 .section-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    display: block;
-    transition: transform 0.3s ease;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .section-content h2 {
-    font-family: "Merriweather", serif;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: hsl(210, 29%, 24%);
-    transition: color 0.3s ease;
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: hsl(210, 29%, 24%);
+  transition: color 0.3s ease;
 }
 
 .section-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    color: hsl(210, 20%, 35%);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: hsl(210, 20%, 35%);
 }
 
 .section-description {
-    font-size: 0.95rem !important;
-    line-height: 1.6;
-    color: hsl(210, 15%, 45%) !important;
-    margin-bottom: 1.5rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6;
+  color: hsl(210, 15%, 45%) !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .enter-text {
-    display: inline-block;
-    font-weight: 600;
-    color: hsl(205, 100%, 40%);
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
-    border: 2px solid transparent;
-    border-radius: 25px;
+  display: inline-block;
+  font-weight: 600;
+  color: hsl(205, 100%, 40%);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 25px;
 }
 
 /* Hover Effects */
 .split-section:hover {
-    transform: scale(1.01);
-    z-index: 10;
+  transform: scale(1.01);
+  z-index: 10;
 }
 
 .left-section:hover {
-    background: linear-gradient(45deg, hsl(192, 15%, 98%) 0%, hsl(192, 20%, 95%) 100%);
-    box-shadow: 5px 0 20px hsla(0, 0%, 0%, 0.1);
+  background: linear-gradient(
+    45deg,
+    hsl(192, 15%, 98%) 0%,
+    hsl(192, 20%, 95%) 100%
+  );
+  box-shadow: 5px 0 20px hsla(0, 0%, 0%, 0.1);
 }
 
 .right-section:hover {
-    background: linear-gradient(45deg, hsl(208, 25%, 96%) 0%, hsl(208, 32%, 92%) 100%);
-    box-shadow: -5px 0 20px hsla(0, 0%, 0%, 0.1);
+  background: linear-gradient(
+    45deg,
+    hsl(208, 25%, 96%) 0%,
+    hsl(208, 32%, 92%) 100%
+  );
+  box-shadow: -5px 0 20px hsla(0, 0%, 0%, 0.1);
 }
 
 .split-section:hover .section-icon {
-    transform: translateY(-10px) scale(1.1);
+  transform: translateY(-10px) scale(1.1);
 }
 
 .split-section:hover h2 {
-    color: hsl(205, 100%, 30%);
+  color: hsl(205, 100%, 30%);
 }
 
 .split-section:hover .enter-text {
-    background: hsl(205, 100%, 40%);
-    color: white;
-    border-color: hsl(205, 100%, 40%);
-    transform: translateY(-2px);
+  background: hsl(205, 100%, 40%);
+  color: white;
+  border-color: hsl(205, 100%, 40%);
+  transform: translateY(-2px);
 }
 
 .welcome-footer {
-    text-align: center;
-    padding: 1.5rem;
-    color: hsl(210, 15%, 45%);
-    font-size: 0.9rem;
-    border-top: 1px solid hsl(208, 32%, 76%);
-    flex-shrink: 0;
+  text-align: center;
+  padding: 1.5rem;
+  color: hsl(210, 15%, 45%);
+  font-size: 0.9rem;
+  border-top: 1px solid hsl(208, 32%, 76%);
+  flex-shrink: 0;
 }
 
 .welcome-footer p {
-    margin: 0.25rem 0;
+  margin: 0.25rem 0;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .welcome-header h1 {
-        font-size: 2.5rem;
-    }
-    
-    .split-container {
-        flex-direction: column;
-        min-height: auto;
-    }
-    
-    .split-container::before {
-        display: none;
-    }
-    
-    .split-section {
-        min-height: 50vh;
-    }
-    
-    .left-section {
-        border-bottom: 2px solid hsl(208, 32%, 76%);
-    }
-    
-    .section-content h2 {
-        font-size: 1.7rem;
-    }
-    
-    .section-icon {
-        font-size: 3rem;
-    }
-    
-    .split-section:hover {
-        transform: none;
-    }
+  .welcome-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .split-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .split-container::before {
+    display: none;
+  }
+
+  .split-section {
+    min-height: 50vh;
+  }
+
+  .left-section {
+    border-bottom: 2px solid hsl(208, 32%, 76%);
+  }
+
+  .section-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-icon {
+    font-size: 3rem;
+  }
+
+  .split-section:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 480px) {
-    .welcome-header {
-        padding: 1.5rem 1rem;
-    }
-    
-    .welcome-header h1 {
-        font-size: 2rem;
-    }
-    
-    .section-content {
-        padding: 1.5rem;
-    }
-    
-    .section-content h2 {
-        font-size: 1.5rem;
-    }
+  .welcome-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .welcome-header h1 {
+    font-size: 2rem;
+  }
+
+  .section-content {
+    padding: 1.5rem;
+  }
+
+  .section-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animations */
+/* Initial states for animations */
+.welcome-header {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.split-section.left-section {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 0.6s ease-out 0.2s forwards;
+}
+
+.split-section.right-section {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 0.6s ease-out 0.3s forwards;
+}
+
+.welcome-footer {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.4s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

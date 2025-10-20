@@ -41,6 +41,7 @@ main section {
   margin-bottom: 3rem;
   border-bottom: 2px solid hsl(208, 32%, 76%);
   box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.08);
+  position: relative; /* Added for absolute positioning of button */
 }
 
 .main-header {
@@ -51,6 +52,53 @@ main section {
 @keyframes fadeInHeader {
   to {
     opacity: 1;
+  }
+}
+
+.back-button {
+  position: absolute;
+  right: 1.5rem;
+  top: 5rem;
+  background-color: hsl(210, 50%, 85%);
+  color: hsl(210, 40%, 20%);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif; /* Match site's font */
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 2px solid hsl(210, 40%, 75%);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInButton 0.35s ease-in 0.35s forwards; /* Slight delay for effect */
+}
+
+.back-button:hover {
+  background-color: hsl(210, 60%, 80%);
+  border-color: hsl(210, 50%, 65%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInButton {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .back-button {
+    right: 1rem;
+    top: 1.5rem; /* Slightly lower on mobile too */
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 }
 
