@@ -13,10 +13,18 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: hsl(192, 15%, 94%); /* Main content background */
   color: hsl(210, 29%, 24%); /* Default text color */
-  padding-top: 4rem; /* Push content below the fixed menu */
+  margin: 0;
+  padding: 0;
 }
 
 main {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+main section {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -24,28 +32,134 @@ main {
 /* Header styling */
 .main-header {
   text-align: center;
+  background: hsl(208, 32%, 85%);
+  padding: 2.5rem 2rem 2rem;
+  margin: 0;
+  padding-top: calc(
+    2.5rem + 3.5rem
+  ); /* Add space for fixed nav INSIDE padding */
+  margin-bottom: 3rem;
+  border-bottom: 2px solid hsl(208, 32%, 76%);
+  box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.08);
+}
+
+.main-header {
+  opacity: 0;
+  animation: fadeInHeader 0.35s ease-in forwards;
+}
+
+@keyframes fadeInHeader {
+  to {
+    opacity: 1;
+  }
 }
 
 .main-header h1 {
   margin: 0;
+  font-size: 2.5rem;
+  color: hsl(210, 29%, 20%);
+  text-shadow: 0 1px 2px hsla(0, 0%, 100%, 0.5);
+  letter-spacing: -0.5px;
 }
 
-.main-header h2 {
-  margin: 0.625rem 0 0 0;
+.main-header .subtitle {
+  margin: 0.75rem 0 0 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: hsl(210, 20%, 35%);
+  font-style: italic;
 }
 
-hr {
-  margin-left: -60px;
-  margin-right: -60px;
-  padding: 0;
-  height: 1px;
-  border: none;
-  background-color: hsl(209, 16%, 42%);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 2rem 1.5rem 1.5rem;
+    margin-top: 3.5rem; /* Slightly less space on mobile */
+    margin-bottom: 2rem;
+  }
+
+  .main-header h1 {
+    font-size: 2rem;
+  }
+
+  .main-header .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    margin-top: 3rem;
+  }
+
+  .main-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .main-header .subtitle {
+    font-size: 1rem;
+  }
 }
 
 /* Footer styling */
 footer {
+  background: hsl(208, 32%, 85%);
+  border-top: 2px solid hsl(208, 32%, 76%);
+  margin-top: 4rem;
+  padding: 2.5rem 2rem 2rem;
   text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-disclaimer {
+  font-size: 0.9rem;
+  color: hsl(210, 20%, 35%);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.footer-disclaimer strong {
+  color: hsl(210, 29%, 24%);
+  font-weight: 600;
+}
+
+.footer-copy {
+  font-size: 0.95rem;
+  color: hsl(210, 29%, 24%);
+  font-weight: 500;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.footer-updated {
+  font-size: 0.85rem;
+  color: hsl(210, 20%, 40%);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1.5rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .footer-disclaimer {
+    font-size: 0.85rem;
+  }
+
+  .footer-copy {
+    font-size: 0.9rem;
+  }
+
+  .footer-updated {
+    font-size: 0.8rem;
+  }
 }
 
 h1,
@@ -53,6 +167,15 @@ h2,
 h3,
 h4 {
   font-family: "Merriweather", serif;
+}
+
+/* Padding for headings outside sections */
+main > h1,
+main > h2,
+main > h3,
+main > h4 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Main page header overrides */
@@ -78,8 +201,9 @@ header nav {
   width: 100%;
   background: hsl(208, 32%, 76%);
   z-index: 1000;
-  margin: 0; /* remove any default margin */
-  padding: 0; /* remove any default padding */
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid hsl(208, 32%, 70%);
 }
 
 .menu {
@@ -116,7 +240,6 @@ header nav {
 
 .menu a:hover,
 .menu a:focus {
-  /* Hover effect */
   background: hsl(209, 26%, 69%);
   color: hsl(210, 29%, 24%);
 }

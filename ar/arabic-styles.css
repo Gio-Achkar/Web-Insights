@@ -17,16 +17,32 @@ body {
   direction: rtl; /* Right-to-left text direction */
   text-align: right; /* Default right alignment for Arabic */
   margin: 0;
-  padding: 20px; /* Add padding to prevent cutoff */
+  padding: 0; /* CHANGED from 20px */
   line-height: 1.6;
 }
 
-/* Header styling */
+/* Header styling - Updated to match English page */
 .main-header {
   text-align: center;
-  padding: 1.5rem 1rem 0 1rem;
-  margin: -20px -20px 2rem -20px; /* Extend header to full width */
+  background: hsl(208, 32%, 85%);
+  padding: 2.5rem 2rem 2rem;
+  margin: 0;
+  padding-top: 2.5rem; /* No fixed nav, so no extra padding needed */
+  margin-bottom: 3rem;
+  border-bottom: 2px solid hsl(208, 32%, 76%);
+  box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.08);
   position: relative; /* For absolute positioning of button */
+}
+
+.main-header {
+  opacity: 0;
+  animation: fadeInHeader 0.35s ease-in forwards;
+}
+
+@keyframes fadeInHeader {
+  to {
+    opacity: 1;
+  }
 }
 
 .main-header h1 {
@@ -34,26 +50,28 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
-  color: hsl(210, 29%, 24%);
+  color: hsl(210, 29%, 20%); /* Match English header title */
+  text-shadow: 0 1px 2px hsla(0, 0%, 100%, 0.5);
+  letter-spacing: -0.5px;
 }
 
 .main-header h2 {
   font-family: "Noto Sans Arabic", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Match English subtitle */
   font-weight: 400;
-  color: hsl(210, 20%, 35%);
-  margin: 0.625rem 0 0 0;
+  color: hsl(210, 20%, 35%); /* Match English subtitle */
+  margin: 0.75rem 0 0 0;
+  font-style: italic;
 }
 
-/* HR styling - adjusted for RTL */
+/* HR styling - no need for negative margins anymore */
 hr {
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: 0;
+  margin-right: 0;
   height: 1px;
   border: none;
   background-color: hsl(209, 16%, 42%);
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  padding: 0;
 }
 
 /* General heading fonts - Bold Noto Sans Arabic for distinction */
@@ -74,14 +92,62 @@ p {
   line-height: 1.6;
 }
 
-/* Section styling to prevent cutoff */
+/* Section styling - add padding like English page */
 section {
-  margin: 1rem 1rem;
+  margin: 1rem 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
+/* Footer styling - Updated to match English page */
 footer {
+  background: hsl(208, 32%, 85%);
+  border-top: 2px solid hsl(208, 32%, 76%);
+  margin-top: 4rem;
+  padding: 2.5rem 2rem 2rem;
   text-align: center;
-  padding: 0;
+}
+
+footer p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer p:first-of-type,
+footer p:nth-of-type(2) {
+  font-size: 0.9rem;
+  color: hsl(210, 20%, 35%);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: right; /* Keep right-aligned for Arabic */
+}
+
+footer p:first-of-type b,
+footer p:nth-of-type(2) b {
+  color: hsl(210, 29%, 24%);
+  font-weight: 600;
+}
+
+footer p:nth-of-type(3) {
+  font-size: 0.95rem;
+  color: hsl(210, 29%, 24%);
+  font-weight: 500;
+  margin: 2rem 0 0.5rem 0;
+}
+
+footer p:last-of-type {
+  font-size: 0.85rem;
+  color: hsl(210, 20%, 40%);
+  font-style: italic;
+  margin: 0;
+}
+
+footer p:nth-of-type(3),
+footer p:last-of-type {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Section with image and text side by side */
@@ -89,7 +155,37 @@ footer {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  margin: 2rem 0 0 0;
+  margin: 2rem 20px; /* CHANGED - Add same horizontal margin as other sections */
+  background-color: hsl(200, 30%, 97%);
+  border: 1px solid hsl(200, 25%, 88%);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .section-with-image {
+    flex-direction: column;
+    margin: 1.5rem 10px; /* CHANGED - Match mobile section margins */
+  }
+
+  .section-images {
+    max-width: 100%;
+    margin: 1rem 0 0 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .single-figure {
+    flex: 1;
+    max-width: 200px;
+  }
+
+  .single-figure img {
+    height: 150px;
+  }
 }
 
 .section-content {
@@ -177,6 +273,52 @@ footer {
   .single-figure img {
     height: 150px; /* Smaller on mobile */
   }
+
+  .main-header {
+    padding: 2rem 1.5rem 1.5rem;
+    padding-top: 4rem; /* More space for back button */
+    margin-bottom: 2rem;
+  }
+
+  .main-header h1 {
+    font-size: 2rem;
+  }
+
+  .main-header h2 {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    padding: 2rem 1.5rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  footer p:first-of-type,
+  footer p:nth-of-type(2) {
+    font-size: 0.85rem;
+  }
+
+  footer p:nth-of-type(3) {
+    font-size: 0.9rem;
+  }
+
+  footer p:last-of-type {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    padding-top: 3.5rem;
+  }
+
+  .main-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .main-header h2 {
+    font-size: 1rem;
+  }
 }
 
 /* Section block styling */
@@ -185,7 +327,7 @@ section {
   border: 1px solid hsl(220, 15%, 92%);
   border-radius: 12px;
   padding: 2rem;
-  margin: 2rem 1rem;
+  margin: 2rem 20px; /* Add horizontal margin for spacing */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
   transition: box-shadow 0.3s ease; /* Smooth hover effect */
 }
@@ -223,15 +365,10 @@ section p:last-child {
 /* Mobile responsive for blocks */
 @media (max-width: 768px) {
   section {
-    margin: 1.5rem 0.5rem;
+    margin: 1.5rem 10px;
     padding: 1.5rem;
     border-radius: 8px;
   }
-}
-
-section {
-  background-color: hsl(220, 20%, 98%);
-  border: 1px solid hsl(220, 15%, 92%);
 }
 
 /* Back button styling */
@@ -271,9 +408,5 @@ section {
     top: 1rem;
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
-  }
-
-  .main-header {
-    padding-top: 3.5rem; /* More space for button on mobile */
   }
 }
