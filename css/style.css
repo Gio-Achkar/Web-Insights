@@ -292,6 +292,91 @@ header nav {
   color: hsl(210, 29%, 24%);
 }
 
+/* Dropdown styles */
+.dropdown-content {
+  display: block; /* Always display for animation */
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;
+  transform: translateY(-10px); /* Slight upward offset for slide-in effect */
+  position: absolute;
+  background-color: hsl(208, 32%, 76%); /* Match nav background */
+  width: max-content; /* Size to content */
+  max-width: 300px; /* Limit width to prevent it from being too long */
+  box-shadow: 0 6px 16px hsla(0, 0%, 0%, 0.2), 0 2px 6px hsla(0, 0%, 0%, 0.1); /* Subtle 3D effect with layered shadows */
+  border-radius: 12px; /* More circular corners */
+  z-index: 1001; /* Above nav */
+  top: 100%; /* Position below the "Articles" trigger */
+  border: 1px solid hsl(208, 32%, 70%); /* Match nav border */
+  transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Smooth popup animation */
+}
+
+/* Show dropdown on hover with animation */
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content li {
+  display: block;
+  border-bottom: 1px solid hsl(208, 32%, 70%); /* Separator between items */
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a {
+  padding: 0.75rem 1rem; /* Smaller padding for dropdown items */
+  color: hsl(210, 29%, 24%);
+  font-weight: 600;
+  white-space: normal; /* Allow text to wrap if needed */
+  word-wrap: break-word; /* Break long words */
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background: hsl(209, 26%, 69%);
+  color: hsl(210, 29%, 24%);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile: Make dropdown touch-friendly (optional - converts to click/tap on small screens) */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static; /* Stack below instead of absolute */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    transition: none; /* Disable animation on mobile for simplicity */
+  }
+
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdown-content li {
+    border-bottom: none;
+  }
+
+  .dropdown-content a {
+    padding: 0.5rem 0.625rem;
+  }
+}
+
+.arabic-link {
+  font-family: "Noto Sans Arabic", sans-serif; /* Matches Arabic page font */
+}
+
 /*Grid layout for articles - index.html*/
 .topics {
   display: grid;

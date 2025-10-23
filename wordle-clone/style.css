@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filled-box {
+  border: 2px solid rgb(128, 128, 128);
+}
+
+.letter-row {
+  display: flex;
+}
+
+#keyboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Modern way to space flex items */
+  padding: 20px;
+  background-color: var(--container-bg);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgb(128, 128, 128);
+  margin-top: 30px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px; /* Spacing between keys */
+}
+
+.key {
+  /* 3. Base styling for all keys */
+  background-color: var(--key-bg);
+  color: var(--key-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 18px;
+  min-width: 45px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+  /* 4. Adding smooth transitions for hover and active states */
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+/* 5. Styling for wider keys like 'Enter' and 'Del' */
+.key.wide-key {
+  min-width: 75px;
+  font-size: 0.9rem;
+  background-color: var(--special-key-bg);
+}
+
+/* 6. Interactive feedback for the user */
+.key:hover {
+  background-color: var(--hover-bg);
+  /* Slightly lift the key on hover */
+  transform: translateY(-2px);
+}
+
+.key:active {
+  /* "Press down" effect when clicked */
+  transform: translateY(1px);
+}
