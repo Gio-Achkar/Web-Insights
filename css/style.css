@@ -1,5 +1,6 @@
 html {
   font-size: 16px; /* default browser font size */
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 1024px) {
