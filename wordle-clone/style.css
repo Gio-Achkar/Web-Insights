@@ -6,17 +6,13 @@
   --container-bg: #f9f9f9;
 }
 
-body {
+.game-container {
   margin: 0;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
-}
-
-h1 {
-  text-align: center;
 }
 
 #game-board {
@@ -242,4 +238,42 @@ h1 {
 .flip {
   animation: flip 0.5s ease;
   transform-origin: center;
+}
+
+/* Adjust only the Play Now version of back-button */
+.play-button {
+  padding: 0.45rem 1rem; /* smaller padding for tighter fit */
+}
+
+.back-button .arrow {
+  font-size: 1.6rem; /* bigger arrow */
+  margin-left: 1px;
+  position: relative;
+  top: 3px; /* moves arrow slightly lower */
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover .arrow {
+  transform: translateY(4px);
+}
+
+#game-container {
+  scroll-margin-top: 75px;
+}
+
+/* Reset global padding and alignment only for this page */
+main#game-page > section#game-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure the keyboard box doesn't stretch full width */
+#keyboard-container {
+  width: fit-content !important; /* box only as wide as needed */
+  margin: 30px auto 0 !important; /* center horizontally */
+  box-sizing: border-box;
 }

@@ -3,27 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wordle Clone</title>
+
+    <!-- Basic Info -->
+    <title>Wordle Clone | Web Insights</title>
+    <meta
+      name="description"
+      content="Play a fun Wordle Clone — guess the hidden word in six tries! Built using HTML, CSS, and JavaScript."
+    />
+    <meta name="author" content="Gio Achkar" />
+    <meta
+      name="keywords"
+      content="Wordle, Wordle Clone, Word Game, Puzzle Game, JavaScript Game, Web Game"
+    />
+
+    <!-- Open Graph (for social media sharing) -->
+    <meta property="og:title" content="Wordle Clone | Web Insights" />
+    <meta
+      property="og:description"
+      content="Try to guess the word in six attempts! A Wordle-inspired game built with HTML, CSS, and JS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../assets/preview.png" />
+    <meta property="og:url" content="https://yourwebsite.com/wordle-clone" />
+
+    <!-- Favicon and Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Script -->
     <script type="module" src="script.js"></script>
   </head>
+
   <body>
-    <h1>Wordle Clone - UNDER DEVELOPMENT</h1>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="../css/index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Articles</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="../css/history.html">History of the Web & Browsers</a>
+              </li>
+              <li><a href="../css/security.html">Security on the Web</a></li>
+              <li>
+                <a href="../css/mobile-first.html">Mobile-First Development</a>
+              </li>
+              <li><a href="../css/stats.html">Internet Stats</a></li>
+              <li><a href="../css/css-history.html">CSS History</a></li>
+              <li><a href="../css/js-history.html">JS History</a></li>
+              <li>
+                <a href="../ar/arabic-article.html" class="arabic-link"
+                  >تاريخ لغات البرمجة</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="../css/extra.html">Web Extras</a></li>
+          <li><a href="../schedule/index.html">Schedule</a></li>
+          <li><a href="../cv/index.html">CV</a></li>
+          <li><a href="#">Wordle</a></li>
+          <li><a href="../css/references.html">References</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div id="game-board"></div>
-
-    <div id="keyboard-container"></div>
-
-    <div id="toast" aria-live="polite" role="status"></div>
-
-    <!-- Game End Popup -->
-    <div id="popup-overlay">
-      <div id="popup-box">
-        <h2 id="popup-title">Game Over!</h2>
-        <p id="popup-score">Your score: 0 / 60</p>
-        <p id="popup-guesses">Guesses used: 0</p>
-        <button id="popup-btn">Play Again</button>
+    <main id="game-page">
+      <div class="main-header">
+        <h1>Wordle Clone</h1>
+        <p class="subtitle">Inspired by the New York Times' Wordle Game.</p>
+        <a href="#game-container" class="back-button play-button"
+          >Play Now<span class="arrow">▾</span></a
+        >
       </div>
-    </div>
+
+      <section id="game-container">
+        <div id="game-board"></div>
+
+        <div id="keyboard-container"></div>
+
+        <div id="toast" aria-live="polite" role="status"></div>
+
+        <!-- Game End Popup -->
+        <div id="popup-overlay">
+          <div id="popup-box">
+            <h2 id="popup-title">Game Over!</h2>
+            <p id="popup-score">Your score: 0 / 60</p>
+            <p id="popup-guesses">Guesses used: 0</p>
+            <button id="popup-btn">Play Again</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-disclaimer">
+          <strong>Disclaimer: </strong> This website was created for educational
+          purposes as part of a university web course. All content has been
+          carefully researched and verified to be as accurate as possible at the
+          time of writing.
+        </p>
+        <p class="footer-disclaimer">
+          <strong>AI Disclosure: </strong> AI tools (ChatGPT by OpenAI) were
+          used to assist in drafting, organizing, and proofreading parts of this
+          project. All generated content was carefully reviewed, fact-checked,
+          and edited to ensure accuracy.
+        </p>
+
+        <p class="footer-disclaimer">
+          <strong>Credits:</strong> Developed by Gio Achkar in collaboration
+          with Kevin Skayem, John Samaha, and Charbel Salloum.
+        </p>
+
+        <p class="footer-copy">&copy; 2025 Web Insights | By Gio Al Achkar</p>
+        <p class="footer-updated">Last updated: October 25, 2025</p>
+      </div>
+    </footer>
   </body>
 </html>
