@@ -9,7 +9,6 @@ let currentGuess = [];
 let nextLetter = 0;
 let previousGuesses = [];
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
-console.log(rightGuessString);
 let gameOver = false;
 let isRevealing = false;
 
@@ -95,7 +94,7 @@ function updateKeyColor(letter, color) {
   }
 }
 
-// Handles checking the current guess (temporary: just logs it)
+// Handles checking the current guess
 function checkGuess() {
   if (gameOver || isRevealing) return;
 
@@ -260,7 +259,6 @@ function newGame() {
 
   // Pick a new random target word
   rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
-  console.log("New word:", rightGuessString);
 
   // Reset keyboard colors
   const keys = document.querySelectorAll(".key");
@@ -334,8 +332,6 @@ function showPopup(resultText, score, guessesUsed) {
 document.addEventListener("DOMContentLoaded", function () {
   // Code to create the keyboard goes inside this function
 
-  console.log("The page's HTML is fully loaded. Now creating the keyboard!");
-
   // 1. Get the container where the keyboard will go
   const keyboardContainer = document.getElementById("keyboard-container");
 
@@ -375,7 +371,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Add click listener for functionality
-      keyElement.addEventListener("click", () => {
+      keyElement.addEventListener("click", (event) => {
+        event.target.blur(); // removes focus from the clicked button
         if (gameOver) return;
 
         if (key === "Enter") {
