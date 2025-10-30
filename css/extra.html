@@ -559,6 +559,93 @@ print(numbers)  # ['123', '456']</pre
           </div>
         </div>
       </section>
+
+      <section>
+        <h2>
+          Does Modifying a Variable Inside a foreach Loop Also Change the
+          Original Array in PHP and Python?
+        </h2>
+
+        <p>
+          In both PHP and Python, modifying the loop variable inside a foreach
+          loop does not change the original array or list. This is because the
+          variable used in the loop acts as a temporary copy of each element's
+          value, not a direct reference to it. However, each language provides
+          its own way to modify the original collection if needed.
+        </p>
+
+        <h3>In PHP: Using References</h3>
+
+        <p>
+          In PHP, you can modify the original array during a
+          <code>foreach</code> loop by using a reference variable. By adding an
+          ampersand (<code>&amp;</code>) before the loop variable, each
+          iteration refers to the actual array element rather than a copy.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+$colors = ["red", "green"];
+foreach ($colors as &$x) {
+    $x = "blue";
+}
+unset($x); // break the reference to avoid unexpected behavior
+</pre
+        >
+
+        <p>
+          Here, <code>$x</code> points directly to each element, so any changes
+          affect the array itself. In this case, the original array becomes
+          <code>["blue", "blue"]</code>. Without the ampersand (<code
+            >foreach ($colors as $x)</code
+          >), <code>$x</code> is only a copy, and the original array remains
+          unchanged.
+        </p>
+
+        <p>
+          <strong>Note:</strong> When using references in a
+          <code>foreach</code> loop, PHP keeps the loop variable (e.g.,
+          <code>$x</code>) linked to the last array element even after the loop
+          ends. To prevent unexpected changes, it's best practice to call
+          <code>unset($x)</code> right after the loop
+          <a href="references.html#ref47">[47]</a>.
+        </p>
+
+        <h3>In Python: Using Index-Based Loops</h3>
+
+        <p>
+          In Python, a standard <code>(for x in colors:)</code> loop does not
+          modify the original list, because the variable <code>x</code> only
+          stores a temporary copy of each element's value. To change the list
+          itself, you must access and update its elements directly using their
+          indexes.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+colors = ["red", "green"]
+for i in range(len(colors)):
+    colors[i] = "blue"
+</pre
+        >
+
+        <p>
+          Here, <code>len(colors)</code> returns the number of elements in the
+          list (2). The <code>range()</code> function then produces a sequence
+          of numbers starting from 0 up to, but not including, that value. In
+          this case, <code>range(len(colors))</code> gives <code>[0, 1]</code>,
+          which are the indexes of the list. The loop uses these indexes to
+          visit each position so that <code>colors[i]</code> can be updated
+          directly <a href="references.html#ref48">[48]</a>.
+        </p>
+
+        <p>
+          After the loop, the list becomes <code>["blue", "blue"]</code>, since
+          each element was replaced in place.
+        </p>
+      </section>
     </main>
 
     <footer>
