@@ -1,9 +1,256 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Under Development</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Web Insights</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="cv.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    Under Development
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="../css/index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Articles</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="../css/history.html">History of the Web & Browsers</a>
+              </li>
+              <li>
+                <a href="../css/security.html">Security on the Web</a>
+              </li>
+              <li>
+                <a href="../css/mobile-first.html">Mobile-First Development</a>
+              </li>
+              <li><a href="../css/stats.html">Internet Stats</a></li>
+              <li><a href="../css/css-history.html">CSS History</a></li>
+              <li><a href="../css/js-history.html">JS History</a></li>
+              <li>
+                <a href="../ar/arabic-article.html" class="arabic-link"
+                  >تاريخ لغات البرمجة</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="../css/extra.html">Web Extras</a></li>
+          <li><a href="../schedule/index.html">Schedule</a></li>
+          <li><a href="#">CV</a></li>
+          <li><a href="../wordle-clone/index.html">Wordle</a></li>
+          <li><a href="../css/references.html">References</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="cv-container">
+        <!-- Header Section -->
+        <section class="cv-header">
+          <button onclick="window.print()" class="print-button-header">
+            Save as PDF
+          </button>
+          <h1>Gio Al Achkar</h1>
+          <p class="cv-title">Computer Engineering Student</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <a href="mailto:GioAchkar@outlook.com">GioAchkar@outlook.com</a>
+            </div>
+            <div class="contact-item">
+              <span>+961 78 977 775</span>
+            </div>
+            <div class="contact-item">
+              <a
+                href="https://www.linkedin.com/in/gio-achkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </div>
+            <div class="contact-item">
+              <a
+                href="https://github.com/Gio-Achkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section class="cv-section">
+          <h2>Professional Summary</h2>
+          <p>
+            Motivated Computer Engineering student at the Holy Spirit University
+            of Kaslik (USEK) with a strong foundation in programming and
+            electronics. Passionate about integrating hardware and software to
+            create efficient and innovative engineering solutions. Eager to gain
+            hands-on experience through collaborative projects, technical
+            challenges, and continuous learning.
+          </p>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+          <h2>Education</h2>
+
+          <div class="education-item">
+            <div class="education-header">
+              <h3>Holy Spirit University of Kaslik (USEK)</h3>
+              <span class="location">Kaslik, Lebanon</span>
+            </div>
+            <div class="education-details">
+              <p class="degree">
+                Bachelor of Engineering in Computer Engineering
+              </p>
+              <div class="education-meta">
+                <span>Expected Graduation: 2028</span>
+                <span class="gpa">Current GPA: 94.11 / 100</span>
+              </div>
+              <p class="activities">
+                <strong>Activities:</strong> IEEE Student Member
+              </p>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-header">
+              <h3>Central College Jounieh (CCJ)</h3>
+              <span class="location">Jounieh, Lebanon</span>
+            </div>
+            <div class="education-details">
+              <p class="degree">
+                Lebanese Baccalaureate, General Sciences (GS) — Graduated with
+                Excellence
+              </p>
+              <div class="education-meta">
+                <span>Graduated: 2024</span>
+                <span class="gpa">Grade: 16.11 / 20</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="cv-section">
+          <h2>Skills</h2>
+
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Programming Languages</h3>
+              <ul>
+                <li>Java</li>
+                <li>C++</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Web Technologies</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Databases</h3>
+              <ul>
+                <li>SQL (Oracle, MySQL)</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Tools & Software</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>GitHub</li>
+                <li>Multisim</li>
+                <li>Microsoft Office</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Languages</h3>
+              <ul>
+                <li>English (Fluent)</li>
+                <li>Arabic (Native)</li>
+                <li>French (Basic)</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Soft Skills</h3>
+              <ul>
+                <li>Teamwork</li>
+                <li>Problem-Solving</li>
+                <li>Adaptability</li>
+                <li>Communication</li>
+                <li>Time Management</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="cv-section">
+          <h2>Projects</h2>
+
+          <div class="project-item">
+            <h3>Web Insights</h3>
+            <p>
+              Multi-page semantic website exploring the evolution of the Web;
+              built with HTML, CSS, and JavaScript.
+            </p>
+          </div>
+
+          <div class="project-item">
+            <h3>Wordle Clone</h3>
+            <p>
+              Interactive browser-based word game developed using modular
+              JavaScript, DOM manipulation, and responsive CSS.
+            </p>
+          </div>
+
+          <div class="project-item">
+            <h3>Bank Account System</h3>
+            <p>
+              Java-based backend application implementing user account
+              management, deposit/withdrawal operations, and balance tracking
+              using Object-Oriented Programming principles.
+            </p>
+          </div>
+        </section>
+
+        <!-- Interests -->
+        <section class="cv-section">
+          <h2>Interests</h2>
+          <p>
+            Electronics, embedded systems, artificial intelligence, software
+            development, and computer systems design.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-disclaimer">
+          <strong>Disclaimer:</strong> This CV is part of the Web Insights
+          project. Information is current as of the date shown below.
+        </p>
+        <p class="footer-copy">&copy; 2025 Web Insights | By Gio Al Achkar</p>
+        <p class="footer-updated">Last updated: November 1, 2025</p>
+      </div>
+    </footer>
   </body>
 </html>

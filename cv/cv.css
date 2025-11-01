@@ -1,0 +1,372 @@
+.cv-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.1);
+  border-radius: 12px;
+  margin-top: 5rem; /* Space for fixed nav */
+  margin-bottom: 2rem;
+}
+
+.cv-header {
+  text-align: center;
+  padding: 2rem 0 2.5rem;
+  border-bottom: 3px solid hsl(208, 32%, 85%);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.cv-header h1 {
+  font-size: 2.5rem;
+  color: hsl(210, 29%, 20%);
+  margin: 0 0 0.5rem 0;
+  font-family: "Merriweather", serif;
+  letter-spacing: -0.5px;
+}
+
+.cv-title {
+  font-size: 1.3rem;
+  color: hsl(210, 20%, 35%);
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.print-button-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, hsl(210, 100%, 45%), hsl(210, 100%, 35%));
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px hsla(210, 100%, 40%, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+.print-button-header:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsla(210, 100%, 40%, 0.4);
+}
+
+.print-button-header:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px hsla(210, 100%, 40%, 0.3);
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: hsl(210, 29%, 24%);
+}
+
+.contact-item a {
+  color: hsl(210, 100%, 40%);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: hsl(210, 100%, 30%);
+  text-decoration: underline;
+}
+
+.cv-section {
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.cv-section h2 {
+  font-size: 1.6rem;
+  color: hsl(210, 29%, 20%);
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid hsl(208, 32%, 85%);
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+}
+
+.cv-section p {
+  line-height: 1.7;
+  color: hsl(210, 29%, 24%);
+  margin: 0;
+}
+
+.education-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: hsl(208, 100%, 98%);
+  border-radius: 8px;
+  border: 1px solid hsl(208, 32%, 90%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.education-header h3 {
+  font-size: 1.2rem;
+  color: hsl(210, 29%, 20%);
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: hsl(210, 20%, 40%);
+  font-style: italic;
+}
+
+.education-details .degree {
+  font-size: 1rem;
+  color: hsl(210, 29%, 24%);
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.education-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: hsl(210, 20%, 40%);
+  margin-bottom: 0.5rem;
+}
+
+.gpa {
+  font-weight: 600;
+  color: hsl(210, 100%, 35%);
+}
+
+.activities {
+  font-size: 0.9rem;
+  color: hsl(210, 20%, 40%);
+  margin: 0.5rem 0 0 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: hsl(208, 100%, 98%);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid hsl(208, 32%, 90%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  color: hsl(210, 100%, 35%);
+  margin: 0 0 0.75rem 0;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  padding: 0.4rem 0;
+  color: hsl(210, 29%, 24%);
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.skill-category li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: hsl(210, 100%, 40%);
+  font-weight: bold;
+}
+
+.project-item {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: hsl(208, 100%, 98%);
+  border-radius: 8px;
+  border: 1px solid hsl(208, 32%, 90%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+.project-item h3 {
+  font-size: 1.1rem;
+  color: hsl(210, 29%, 20%);
+  margin: 0 0 0.5rem 0;
+  font-family: "Merriweather", serif;
+}
+
+.project-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: hsl(210, 29%, 24%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .cv-header h1 {
+    font-size: 2rem;
+    padding-top: 3rem; /* Space for button on mobile */
+  }
+
+  .cv-title {
+    font-size: 1.1rem;
+  }
+
+  .print-button-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cv-section {
+    padding: 0 0.5rem;
+  }
+
+  .cv-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-container {
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .cv-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .cv-title {
+    font-size: 1rem;
+  }
+
+  .print-button-header {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 0.5in; /* Controls page margins */
+    size: letter; /* or A4 */
+  }
+
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav,
+  footer,
+  .cv-actions,
+  .print-button-header {
+    display: none;
+  }
+
+  .cv-container {
+    max-width: 100%;
+    box-shadow: none;
+    margin: 0;
+    padding: 1rem; /* Adjust internal padding */
+  }
+
+  .cv-section {
+    page-break-inside: avoid;
+  }
+
+  .education-item,
+  .project-item {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: hsl(210, 29%, 24%);
+    text-decoration: none;
+  }
+
+  .contact-item a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8rem;
+    color: hsl(210, 20%, 50%);
+  }
+}
