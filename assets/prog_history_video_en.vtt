@@ -1,0 +1,418 @@
+﻿WEBVTT
+
+00:00:00.120 --> 00:00:01.358
+Nowadays, programming languages are all
+
+00:00:01.358 --> 00:00:03.338
+around us. It's how we keep the systems
+
+00:00:03.338 --> 00:00:05.071
+and devices we use every day operating
+
+00:00:05.071 --> 00:00:06.803
+and running smoothly. They allow for us
+
+00:00:06.803 --> 00:00:08.536
+measly humans to interact and make cool,
+
+00:00:08.536 --> 00:00:10.516
+fun, or random things just by tapping a
+
+00:00:10.516 --> 00:00:12.497
+few buttons. In fact, I would guess if
+
+00:00:12.497 --> 00:00:13.982
+you're watching this video, you probably
+
+00:00:13.982 --> 00:00:15.467
+know a few programming languages. But
+
+00:00:15.467 --> 00:00:16.952
+what was the first programming language?
+
+00:00:16.952 --> 00:00:18.932
+Well, if you look this up on Google,
+
+00:00:18.932 --> 00:00:20.170
+you're going to find varying reults.
+
+00:00:20.840 --> 00:00:22.988
+People claim that maybe it's Autocode by
+
+00:00:22.988 --> 00:00:25.136
+Alick Glennie in the early 1950s, or
+
+00:00:25.136 --> 00:00:27.284
+maybe it's Fortran, also developed in the
+
+00:00:27.284 --> 00:00:29.125
+1950s, but in all actuality computer
+
+00:00:29.125 --> 00:00:30.966
+science, when it relates to programming
+
+00:00:30.966 --> 00:00:32.500
+started much earlier than this.
+
+00:00:36.750 --> 00:00:38.447
+Computer science, when it relates to
+
+00:00:38.447 --> 00:00:40.143
+programming, actually dates way back as
+
+00:00:40.143 --> 00:00:42.406
+far as 1843 with Ada Lovelace and her
+
+00:00:42.406 --> 00:00:44.102
+experimentations. I'm not going to bore
+
+00:00:44.102 --> 00:00:46.365
+you to death with the details of the
+
+00:00:46.365 --> 00:00:47.779
+1800s computer science concepts, but
+
+00:00:47.779 --> 00:00:49.758
+there are a few things that she
+
+00:00:49.758 --> 00:00:51.455
+understood that paved the way and
+
+00:00:51.455 --> 00:00:53.152
+honestly started the foundation of all
+
+00:00:53.152 --> 00:00:54.933
+computer programming languages as we know
+
+00:00:54.933 --> 00:00:57.182
+it, when Ada Lovelace was young she was
+
+00:00:57.182 --> 00:00:58.868
+incredibly intelligent, so much so that
+
+00:00:58.868 --> 00:01:00.836
+her mathematical talents led her to a
+
+00:01:00.836 --> 00:01:02.241
+long and rewarding friendship with
+
+00:01:02.241 --> 00:01:03.928
+Charles Babbage, the known father of
+
+00:01:03.928 --> 00:01:05.895
+computers. Now what we really need to
+
+00:01:05.895 --> 00:01:07.863
+know is that Charles Babbage had a
+
+00:01:07.863 --> 00:01:09.549
+breakthrough in the 1820s inventing the
+
+00:01:09.549 --> 00:01:10.955
+difference machine. This was literally
+
+00:01:10.955 --> 00:01:12.360
+the first successful fully automatic
+
+00:01:12.360 --> 00:01:14.328
+calculator, and to be honest, that was
+
+00:01:14.328 --> 00:01:17.278
+its main purpose. But this was out of the
+
+00:01:17.278 --> 00:01:18.907
+world, unthinkable at the time. Lovelace
+
+00:01:18.907 --> 00:01:20.535
+seen this and immediately had a
+
+00:01:20.535 --> 00:01:22.435
+revelation of her own. She realized that
+
+00:01:22.435 --> 00:01:24.335
+Babbage's machine could do much more than
+
+00:01:24.335 --> 00:01:26.235
+just calculate. It was a general purpose
+
+00:01:26.235 --> 00:01:28.135
+machine for whatever you might want to
+
+00:01:28.135 --> 00:01:30.035
+do. In fact, Lovelace was the first
+
+00:01:30.035 --> 00:01:31.935
+person to make the leap that numbers
+
+00:01:31.935 --> 00:01:33.292
+could actually represent other things
+
+00:01:33.292 --> 00:01:34.649
+digitally. Right then, the idea
+
+00:01:34.649 --> 00:01:36.482
+of Programming languages was first born.
+
+00:01:36.482 --> 00:01:38.571
+I actually researched more into this and
+
+00:01:38.571 --> 00:01:40.660
+beyond just that. She thought about how
+
+00:01:40.660 --> 00:01:42.748
+to repeat a series of instructions with
+
+00:01:42.748 --> 00:01:44.837
+machines and came up with looping. She
+
+00:01:44.837 --> 00:01:46.926
+literally conjured up what loops now are
+
+00:01:46.926 --> 00:01:49.313
+with four loops and while loops back in
+
+00:01:49.313 --> 00:01:49.910
+the 1800s.
+
+00:01:52.790 --> 00:01:54.979
+Now, after Ada Lovelace, there was
+
+00:01:54.979 --> 00:01:57.168
+actually a huge gap in the timeline. No
+
+00:01:57.168 --> 00:01:59.357
+one knew at the time how to convert
+
+00:01:59.357 --> 00:02:00.999
+machine code and what machines created
+
+00:02:00.999 --> 00:02:02.367
+into actual programming languages. This
+
+00:02:02.367 --> 00:02:04.009
+was until Alan Turing made a
+
+00:02:04.009 --> 00:02:05.104
+groundbreaking discovery. Alan Turing,
+
+00:02:05.104 --> 00:02:06.745
+another prominent figure in the computer
+
+00:02:06.745 --> 00:02:08.387
+science upbringing, was a famous computer
+
+00:02:08.387 --> 00:02:10.303
+scientist for his work on cracking Nazi
+
+00:02:10.303 --> 00:02:11.874
+Germany's Enigma Code. Turning came him
+
+00:02:11.874 --> 00:02:14.088
+up with the concept that built upon Ada
+
+00:02:14.088 --> 00:02:15.749
+Lovelace's original ideas, which was that
+
+00:02:15.749 --> 00:02:17.687
+there very well could be a universal
+
+00:02:17.687 --> 00:02:19.072
+machine, one that could follow
+
+00:02:19.072 --> 00:02:20.456
+instructions and was powered by
+
+00:02:20.456 --> 00:02:21.840
+electricity and could run programs.
+
+00:02:24.860 --> 00:02:26.923
+Shortly after this we had the onslaught
+
+00:02:26.923 --> 00:02:28.397
+of actual programming languages appear,
+
+00:02:28.397 --> 00:02:30.460
+but many wonder what was the first
+
+00:02:30.460 --> 00:02:31.934
+legitimate programming language? Well, it
+
+00:02:31.934 --> 00:02:33.703
+turns out the very first programming
+
+00:02:33.703 --> 00:02:35.766
+language to actually be used was created
+
+00:02:35.766 --> 00:02:37.830
+between 1942 and 1945 and was named
+
+00:02:37.830 --> 00:02:40.188
+Plankalkul. I'm not sure how
+
+00:02:40.188 --> 00:02:40.482
+it's pronounced.
+
+00:02:44.852 --> 00:02:46.505
+Created by Konrad Zuse, Plankalkul was
+
+00:02:46.505 --> 00:02:48.158
+the first semi high level programming
+
+00:02:48.158 --> 00:02:50.362
+language and it was mainly used to store
+
+00:02:50.362 --> 00:02:52.291
+codes which at the time enabled engineers
+
+00:02:52.291 --> 00:02:54.219
+to carry out routines or repetitive tasks
+
+00:02:54.219 --> 00:02:55.872
+way easier than simply doing it
+
+00:02:55.872 --> 00:02:57.525
+themselves. Little did Konrad know this
+
+00:02:57.525 --> 00:02:59.454
+was the beginning of the onslaught of
+
+00:02:59.454 --> 00:03:01.107
+many more programming languages that most
+
+00:03:01.107 --> 00:03:02.760
+of us know and love today.
+
+00:03:06.490 --> 00:03:08.150
+However, while Konrad Zuse was
+
+00:03:08.150 --> 00:03:10.474
+creating Plankalkul, there was another
+
+00:03:10.474 --> 00:03:12.467
+computer scientist at the University of
+
+00:03:12.467 --> 00:03:14.127
+London in Kathleen Booth, another
+
+00:03:14.127 --> 00:03:16.119
+historical woman figure in the computer
+
+00:03:16.119 --> 00:03:17.779
+science industry. Kathleen created the
+
+00:03:17.779 --> 00:03:19.107
+first majorly popular programming
+
+00:03:19.107 --> 00:03:21.432
+language at the time in assembly. This
+
+00:03:21.432 --> 00:03:24.088
+was first created in 1947 and has been
+
+00:03:24.088 --> 00:03:26.263
+used. Nonstop, even up to the present
+
+00:03:26.263 --> 00:03:28.308
+date. This was the first public and
+
+00:03:28.308 --> 00:03:30.061
+accessible step that was above machine
+
+00:03:30.061 --> 00:03:32.107
+language and was before the revolution of
+
+00:03:32.107 --> 00:03:34.152
+some of the most infamous high level
+
+00:03:34.152 --> 00:03:35.613
+programming languages. Assembly in itself
+
+00:03:35.613 --> 00:03:37.658
+is a very low level programming language.
+
+00:03:37.658 --> 00:03:39.119
+Its intentions are to communicate
+
+00:03:39.119 --> 00:03:40.872
+directly with the computers hardware via
+
+00:03:40.872 --> 00:03:42.625
+keyword access modifiers just like we
+
+00:03:42.625 --> 00:03:43.793
+used today. However many
+
+00:03:43.793 --> 00:03:45.248
+have described Assembly syntax as
+
+00:03:45.248 --> 00:03:47.027
+rigorous and difficult to learn, but once
+
+00:03:47.027 --> 00:03:48.807
+you learn it, it shows the true
+
+00:03:48.807 --> 00:03:50.077
+relationship between the programmer and
+
+00:03:50.077 --> 00:03:50.840
+the computer itself.
+
+00:03:53.610 --> 00:03:55.961
+After Assembly was created in 1947, many
+
+00:03:55.961 --> 00:03:57.640
+of the foundational programming languages
+
+00:03:57.640 --> 00:03:59.319
+were built. Fortran, Autocode, Algol,
+
+00:03:59.319 --> 00:04:02.005
+COBOL, BASIC, Pascal, C, and SQL, all of
+
+00:04:02.005 --> 00:04:04.020
+which dating back before 1975 and
+
+00:04:04.020 --> 00:04:06.707
+building what we know to be high level
+
+00:04:06.707 --> 00:04:08.722
+programming languages in some ways. Their
+
+00:04:08.722 --> 00:04:10.401
+principles were later designed and
+
+00:04:10.401 --> 00:04:12.516
+modified off of with newer. Programming
+
+00:04:12.516 --> 00:04:14.710
+languages like Java, Python, Ruby, C++,
+
+00:04:14.710 --> 00:04:17.636
+PHP, C#, JavaScript, and so many more. At
+
+00:04:17.636 --> 00:04:20.561
+the end of the day, all of the
+
+00:04:20.561 --> 00:04:22.756
+languages we use today for whatever
+
+00:04:22.756 --> 00:04:24.950
+reasons, whether it be game development,
+
+00:04:24.950 --> 00:04:26.413
+software engineering, cybersecurity, our
+
+00:04:26.413 --> 00:04:28.607
+hobbies our side jobs our careers,
+
+00:04:28.607 --> 00:04:31.167
+everything is all thanks to the founding
+
+00:04:31.167 --> 00:04:33.855
+fathers of computer science. Thank you
+
+00:04:33.855 --> 00:04:36.240
+Ada Lovelace, Alan Turing, Konrad Zuse
+
+00:04:36.240 --> 00:04:37.000
+and Kathleen Booth.

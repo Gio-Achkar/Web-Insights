@@ -418,3 +418,34 @@ section p:last-child {
     font-size: 0.85rem;
   }
 }
+
+/* --- Custom style for Alan Turing statue image --- */
+#turing-statue {
+  width: 100%; /* Keep consistent horizontal size */
+  height: 270px; /* Make it taller than the default 200px */
+  object-fit: cover; /* Prevent stretching while filling area */
+  border-radius: 8px; /* Keep rounded corners */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow */
+}
+
+@media (max-width: 768px) {
+  #turing-statue {
+    height: 220px; /* slightly smaller for mobile */
+  }
+}
+
+.section-with-video {
+  background-color: hsl(200, 30%, 97%);
+  border: 1px solid hsl(200, 25%, 88%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Custom figure styling for video */
+.video-figure {
+  text-align: center;
+  margin-top: 1.5rem;
+}
