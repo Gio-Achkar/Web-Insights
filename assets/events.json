@@ -1,0 +1,576 @@
+[
+  {
+    "name": "onabort",
+    "description": "The loading of a media is aborted",
+    "category": "UiEvent, Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onabort_media.asp"
+  },
+  {
+    "name": "onafterprint",
+    "description": "A page has started printing",
+    "category": "Event",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onafterprint.asp"
+  },
+  {
+    "name": "animationend",
+    "description": "A CSS animation has completed",
+    "category": "AnimationEvent",
+    "tags": "-",
+    "link": "https://www.w3schools.com/jsref/event_animationend.asp"
+  },
+  {
+    "name": "animationiteration",
+    "description": "A CSS animation is repeated",
+    "category": "AnimationEvent",
+    "tags": "-",
+    "link": "https://www.w3schools.com/jsref/event_animationiteration.asp"
+  },
+  {
+    "name": "animationstart",
+    "description": "A CSS animation has started",
+    "category": "AnimationEvent",
+    "tags": "-",
+    "link": "https://www.w3schools.com/jsref/event_animationstart.asp"
+  },
+  {
+    "name": "onbeforeprint",
+    "description": "A page is about to be printed",
+    "category": "Event",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onbeforeprint.asp"
+  },
+  {
+    "name": "onbeforeunload",
+    "description": "Before a document is about to be unloaded",
+    "category": "UiEvent, Event",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onbeforeunload.asp"
+  },
+  {
+    "name": "onblur",
+    "description": "An element loses focus",
+    "category": "FocusEvent",
+    "tags": "ALL HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onblur.asp"
+  },
+  {
+    "name": "oncanplay",
+    "description": "The browser can start playing a media (has buffered enough to begin)",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_oncanplay.asp"
+  },
+  {
+    "name": "oncanplaythrough",
+    "description": "The browser can play through a media without stopping for buffering",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_oncanplaythrough.asp"
+  },
+  {
+    "name": "onchange",
+    "description": "The content of a form element has changed",
+    "category": "Event",
+    "tags": "<input type=\"checkbox\">, <input type=\"color\">, <input type=\"date\">, <input type=\"datetime\">, <input type=\"email\">, <input type=\"file\">, <input type=\"month\">, <input type=\"number\">, <input type=\"password\">, <input type=\"radio\">, <input type=\"range\">, <input type=\"search\">, <input type=\"tel\">, <input type=\"text\">, <input type=\"time\">, <input type=\"url\">, <input type=\"week\">, <select> and <textarea>",
+    "link": "https://www.w3schools.com/jsref/event_onchange.asp"
+  },
+  {
+    "name": "onclick",
+    "description": "An element is clicked on",
+    "category": "MouseEvent",
+    "tags": "All except: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onclick.asp"
+  },
+  {
+    "name": "oncontextmenu",
+    "description": "An element is right-clicked to open a context menu",
+    "category": "MouseEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_oncontextmenu.asp"
+  },
+  {
+    "name": "oncopy",
+    "description": "The content of an element is copied",
+    "category": "ClipboardEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_oncopy.asp"
+  },
+  {
+    "name": "oncut",
+    "description": "The content of an element is cut",
+    "category": "ClipboardEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_oncut.asp"
+  },
+  {
+    "name": "ondblclick",
+    "description": "An element is double-clicked",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_ondblclick.asp"
+  },
+  {
+    "name": "ondrag",
+    "description": "An element is being dragged",
+    "category": "DragEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_ondrag.asp"
+  },
+  {
+    "name": "ondragend",
+    "description": "Dragging of an element has ended",
+    "category": "DragEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_ondragend.asp"
+  },
+  {
+    "name": "ondragenter",
+    "description": "A dragged element enters the drop target",
+    "category": "DragEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_ondragenter.asp"
+  },
+  {
+    "name": "ondragleave",
+    "description": "A dragged element leaves the drop target",
+    "category": "DragEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_ondragleave.asp"
+  },
+  {
+    "name": "ondragover",
+    "description": "A dragged element is over the drop target",
+    "category": "DragEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_ondragover.asp"
+  },
+  {
+    "name": "ondragstart",
+    "description": "Dragging of an element has started",
+    "category": "DragEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_ondragstart.asp"
+  },
+  {
+    "name": "ondrop",
+    "description": "A dragged element is dropped on the target",
+    "category": "DragEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_ondrop.asp"
+  },
+  {
+    "name": "ondurationchange",
+    "description": "The duration of a media is changed",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_ondurationchange.asp"
+  },
+  {
+    "name": "onended",
+    "description": "A media has reach the end (\"thanks for listening\")",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onended.asp"
+  },
+  {
+    "name": "onerror",
+    "description": "An error has occurred while loading a file",
+    "category": "ProgressEvent, UiEvent, Event",
+    "tags": "<img>, <input type=\"image\">, <object>, <link>, and <script>",
+    "link": "https://www.w3schools.com/jsref/event_onerror.asp"
+  },
+  {
+    "name": "onfocus",
+    "description": "An element gets focus",
+    "category": "FocusEvent",
+    "tags": "ALL HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onfocus.asp"
+  },
+  {
+    "name": "onfocusin",
+    "description": "An element is about to get focus",
+    "category": "FocusEvent",
+    "tags": "ALL HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onfocusin.asp"
+  },
+  {
+    "name": "onfocusout",
+    "description": "An element is about to lose focus",
+    "category": "FocusEvent",
+    "tags": "ALL HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onfocusout.asp"
+  },
+  {
+    "name": "fullscreenchange",
+    "description": "An element is displayed in fullscreen mode",
+    "category": "Event",
+    "tags": "ALL HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_fullscreenchange.asp"
+  },
+  {
+    "name": "fullscreenerror",
+    "description": "An element can not be displayed in fullscreen mode",
+    "category": "Event",
+    "tags": "ALL HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_fullscreenerror.asp"
+  },
+  {
+    "name": "onhashchange",
+    "description": "There has been changes to the anchor part of a URL",
+    "category": "HashChangeEvent",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onhashchange.asp"
+  },
+  {
+    "name": "oninput",
+    "description": "An element gets user input",
+    "category": "InputEvent, Event",
+    "tags": "<input> and <textarea>",
+    "link": "https://www.w3schools.com/jsref/event_oninput.asp"
+  },
+  {
+    "name": "oninvalid",
+    "description": "An element is invalid",
+    "category": "Event",
+    "tags": "<input>",
+    "link": "https://www.w3schools.com/jsref/event_oninvalid.asp"
+  },
+  {
+    "name": "onkeydown",
+    "description": "A key is down",
+    "category": "KeyboardEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onkeydown.asp"
+  },
+  {
+    "name": "onkeypress",
+    "description": "A key is pressed",
+    "category": "KeyboardEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onkeypress.asp"
+  },
+  {
+    "name": "onkeyup",
+    "description": "A key is released",
+    "category": "KeyboardEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onkeyup.asp"
+  },
+  {
+    "name": "onload",
+    "description": "An object has loaded",
+    "category": "UiEvent, Event",
+    "tags": "<body>, <frame>, <iframe>, <img>, <input type=\"image\">, <link>, <script>, <style>",
+    "link": "https://www.w3schools.com/jsref/event_onload.asp"
+  },
+  {
+    "name": "onloadeddata",
+    "description": "Media data is loaded",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onloadeddata.asp"
+  },
+  {
+    "name": "onloadedmetadata",
+    "description": "Meta data (like dimensions and duration) are loaded",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onloadedmetadata.asp"
+  },
+  {
+    "name": "onloadstart",
+    "description": "The browser starts looking for the specified media",
+    "category": "ProgressEvent",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onloadstart.asp"
+  },
+  {
+    "name": "onmessage",
+    "description": "A message is received through the event source",
+    "category": "Event",
+    "tags": "-",
+    "link": "https://www.w3schools.com/jsref/event_onmessage_sse.asp"
+  },
+  {
+    "name": "onmousedown",
+    "description": "The mouse button is pressed over an element",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onmousedown.asp"
+  },
+  {
+    "name": "onmouseenter",
+    "description": "The pointer is moved onto an element",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onmouseenter.asp"
+  },
+  {
+    "name": "onmouseleave",
+    "description": "The pointer is moved out of an element",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onmouseleave.asp"
+  },
+  {
+    "name": "onmousemove",
+    "description": "The pointer is moved over an element",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onmousemove.asp"
+  },
+  {
+    "name": "onmouseover",
+    "description": "The pointer is moved onto an element",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onmouseover.asp"
+  },
+  {
+    "name": "onmouseout",
+    "description": "The pointer is moved out of an element",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onmouseout.asp"
+  },
+  {
+    "name": "onmouseup",
+    "description": "A user releases a mouse button over an element",
+    "category": "MouseEvent",
+    "tags": "All HTML elements, EXCEPT: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>",
+    "link": "https://www.w3schools.com/jsref/event_onmouseup.asp"
+  },
+  {
+    "name": "onoffline",
+    "description": "The browser starts working offline",
+    "category": "Event",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onoffline.asp"
+  },
+  {
+    "name": "ononline",
+    "description": "The browser starts working online",
+    "category": "Event",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_ononline.asp"
+  },
+  {
+    "name": "onopen",
+    "description": "A connection with the event source is opened",
+    "category": "Event",
+    "tags": "-",
+    "link": "https://www.w3schools.com/jsref/event_onopen_sse.asp"
+  },
+  {
+    "name": "onpagehide",
+    "description": "User navigates away from a webpage",
+    "category": "PageTransitionEvent",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onpagehide.asp"
+  },
+  {
+    "name": "onpageshow",
+    "description": "User navigates to a webpage",
+    "category": "PageTransitionEvent",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onpageshow.asp"
+  },
+  {
+    "name": "onpaste",
+    "description": "Some content is pasted in an element",
+    "category": "ClipboardEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_onpaste.asp"
+  },
+  {
+    "name": "onpause",
+    "description": "A media is paused",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onpause.asp"
+  },
+  {
+    "name": "onplay",
+    "description": "The media has started or is no longer paused",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onplay.asp"
+  },
+  {
+    "name": "onplaying",
+    "description": "The media is playing after being paused or buffered",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onplaying.asp"
+  },
+  {
+    "name": "onprogress",
+    "description": "The browser is downloading media data",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onprogress.asp"
+  },
+  {
+    "name": "onratechange",
+    "description": "The playing speed of a media is changed",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onratechange.asp"
+  },
+  {
+    "name": "onresize",
+    "description": "The document view is resized",
+    "category": "UiEvent, Event",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onresize.asp"
+  },
+  {
+    "name": "onreset",
+    "description": "A form is reset",
+    "category": "Event",
+    "tags": "<form>",
+    "link": "https://www.w3schools.com/jsref/event_onreset.asp"
+  },
+  {
+    "name": "onscroll",
+    "description": "A scrollbar is being scrolled",
+    "category": "UiEvent, Event",
+    "tags": "<address>, <blockquote>, <body>, <caption>, <center>, <dd>, <dir>, <div>, <dl>, <dt>, <fieldset>, <form>, <h1> to <h6>, <html>, <li>, <menu>, <object>, <ol>, <p>, <pre>, <select>, <tbody>, <textarea>, <tfoot>, <thead>, <ul>",
+    "link": "https://www.w3schools.com/jsref/event_onscroll.asp"
+  },
+  {
+    "name": "onsearch",
+    "description": "Something is written in a search field",
+    "category": "Event",
+    "tags": "<input type=\"search\">",
+    "link": "https://www.w3schools.com/jsref/event_onsearch.asp"
+  },
+  {
+    "name": "onseeked",
+    "description": "Skipping to a media position is finished",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onseeked.asp"
+  },
+  {
+    "name": "onseeking",
+    "description": "Skipping to a media position is started",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onseeking.asp"
+  },
+  {
+    "name": "onselect",
+    "description": "User selects some text",
+    "category": "UiEvent, Event",
+    "tags": "<input type=\"file\">, <input type=\"password\">, <input type=\"text\">, and <textarea>",
+    "link": "https://www.w3schools.com/jsref/event_onselect.asp"
+  },
+  {
+    "name": "onshow",
+    "description": "A <menu> element is shown as a context menu",
+    "category": "Event",
+    "tags": "<menu>",
+    "link": "https://www.w3schools.com/jsref/event_onshow.asp"
+  },
+  {
+    "name": "onstalled",
+    "description": "The browser is trying to get unavailable media data",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onstalled.asp"
+  },
+  {
+    "name": "onsubmit",
+    "description": "A form is submitted",
+    "category": "Event",
+    "tags": "<form>",
+    "link": "https://www.w3schools.com/jsref/event_onsubmit.asp"
+  },
+  {
+    "name": "onsuspend",
+    "description": "The browser is intentionally not getting media data",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onsuspend.asp"
+  },
+  {
+    "name": "ontimeupdate",
+    "description": "The playing position has changed (the user moves to a different point in the media)",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_ontimeupdate.asp"
+  },
+  {
+    "name": "ontoggle",
+    "description": "The user opens or closes the <details> element",
+    "category": "Event",
+    "tags": "<details>",
+    "link": "https://www.w3schools.com/jsref/event_ontoggle.asp"
+  },
+  {
+    "name": "touchcancel",
+    "description": "The touch is interrupted",
+    "category": "TouchEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_touchcancel.asp"
+  },
+  {
+    "name": "touchend",
+    "description": "A finger is removed from a touch screen",
+    "category": "TouchEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_touchend.asp"
+  },
+  {
+    "name": "touchmove",
+    "description": "A finger is dragged across the screen",
+    "category": "TouchEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_touchmove.asp"
+  },
+  {
+    "name": "touchstart",
+    "description": "A finger is placed on a touch screen",
+    "category": "TouchEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_touchstart.asp"
+  },
+  {
+    "name": "transitionend",
+    "description": "A CSS transition has completed",
+    "category": "TransitionEvent",
+    "tags": "-",
+    "link": "https://www.w3schools.com/jsref/event_transitionend.asp"
+  },
+  {
+    "name": "onunload",
+    "description": "A page has unloaded",
+    "category": "UiEvent, Event",
+    "tags": "<body>",
+    "link": "https://www.w3schools.com/jsref/event_onunload.asp"
+  },
+  {
+    "name": "onvolumechange",
+    "description": "The volume of a media is changed (includes muting)",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onvolumechange.asp"
+  },
+  {
+    "name": "onwaiting",
+    "description": "A media is paused but is expected to resume (e.g. buffering)",
+    "category": "Event",
+    "tags": "<audio> and <video>",
+    "link": "https://www.w3schools.com/jsref/event_onwaiting.asp"
+  },
+  {
+    "name": "onwheel",
+    "description": "The mouse wheel rolls up or down over an element",
+    "category": "WheelEvent",
+    "tags": "All HTML elements",
+    "link": "https://www.w3schools.com/jsref/event_onwheel.asp"
+  }
+]

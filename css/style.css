@@ -971,3 +971,300 @@ ul.at-rules li::before {
   margin-right: auto;
   display: table;
 }
+
+/* ===== EVENTS CATALOG STYLING ===== */
+
+#events-catalog {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+/* Controls Container */
+.events-controls {
+  background: hsl(0, 0%, 98%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+/* Search Box */
+.search-box {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.search-box label {
+  font-weight: 600;
+  color: hsl(210, 29%, 24%);
+  font-size: 0.95rem;
+}
+
+.search-box input {
+  padding: 0.75rem 1rem;
+  border: 2px solid hsl(208, 32%, 85%);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: hsl(210, 100%, 40%);
+  box-shadow: 0 0 0 3px hsla(210, 100%, 40%, 0.1);
+}
+
+/* Filter Box */
+.filter-box {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-box label {
+  font-weight: 600;
+  color: hsl(210, 29%, 24%);
+  font-size: 0.95rem;
+}
+
+.filter-box select {
+  padding: 0.75rem 1rem;
+  border: 2px solid hsl(208, 32%, 85%);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-box select:focus {
+  outline: none;
+  border-color: hsl(210, 100%, 40%);
+  box-shadow: 0 0 0 3px hsla(210, 100%, 40%, 0.1);
+}
+
+/* Results Info */
+.results-info {
+  flex: 1 1 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-info span {
+  font-weight: 600;
+  color: hsl(210, 29%, 24%);
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: hsl(208, 100%, 97%);
+  border-radius: 8px;
+  border: 2px solid hsl(210, 100%, 90%);
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
+}
+
+/* Events Table */
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.95rem;
+}
+
+.events-table thead {
+  background: hsl(208, 32%, 85%);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.events-table th {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  color: hsl(210, 29%, 20%);
+  border-bottom: 2px solid hsl(208, 32%, 76%);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.events-table tbody tr {
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  transition: background-color 0.2s ease;
+}
+
+.events-table tbody tr:hover {
+  background-color: hsl(208, 100%, 97%);
+}
+
+.events-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.events-table td {
+  padding: 1rem 0.75rem;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+/* Event Name Column */
+.events-table td:first-child {
+  font-weight: 600;
+  color: hsl(210, 100%, 35%);
+  font-family: "Courier New", monospace;
+  white-space: nowrap;
+}
+
+/* Category Badge */
+.category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: hsl(210, 100%, 95%);
+  color: hsl(210, 100%, 35%);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Description Column */
+.events-table td:nth-child(3) {
+  max-width: 350px;
+  word-wrap: break-word;
+}
+
+/* Tags Column */
+.events-table td:nth-child(4) {
+  font-size: 0.85rem;
+  color: hsl(0, 0%, 40%);
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+/* Reference Link */
+.reference-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: hsl(210, 100%, 95%);
+  color: hsl(210, 100%, 40%);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.reference-link:hover {
+  background: hsl(210, 100%, 40%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px hsla(210, 100%, 40%, 0.3);
+}
+
+/* No Results Message */
+.no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: hsl(0, 0%, 98%);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.no-results p {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 40%);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .events-table {
+    font-size: 0.9rem;
+  }
+
+  .events-table th,
+  .events-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .events-table td:nth-child(3),
+  .events-table td:nth-child(4) {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-box,
+  .filter-box,
+  .results-info {
+    flex: 1 1 100%;
+  }
+
+  .results-info {
+    justify-content: flex-start;
+  }
+
+  .events-table {
+    font-size: 0.85rem;
+  }
+
+  .events-table th,
+  .events-table td {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .events-table td:nth-child(3),
+  .events-table td:nth-child(4) {
+    max-width: 200px;
+  }
+
+  .reference-link {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #events-catalog {
+    padding: 1rem 10px;
+  }
+
+  .events-controls {
+    padding: 1rem;
+  }
+
+  /* Make table scroll horizontally on very small screens */
+  .table-wrapper {
+    margin: 0 -10px;
+  }
+
+  .events-table {
+    font-size: 0.8rem;
+  }
+
+  .events-table th,
+  .events-table td {
+    padding: 0.5rem 0.3rem;
+  }
+}

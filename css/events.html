@@ -53,16 +53,73 @@
           <li><a href="extra.html">Web Extras</a></li>
           <li><a href="../schedule/index.html">Schedule</a></li>
           <li><a href="../cv/index.html">CV</a></li>
-          <li><a href="../cv/cv-entry.html">CV-Generator</a></li>
+          <li><a href="../cv/cv-entry.html">CV Builder</a></li>
           <li><a href="../wordle-clone/index.html">Wordle</a></li>
-          <li><a href="events.html" class="active">Events Catalog</a></li>
+          <li><a href="#">Events Catalog</a></li>
           <li><a href="references.html">References</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- ===== MAIN CONTENT (empty for now) ===== -->
-    <main></main>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <div class="main-header">
+        <h1>HTML Events Catalog</h1>
+        <p class="subtitle">
+          Explore key HTML events along with their categories, descriptions, and
+          supported HTML tags.
+        </p>
+      </div>
+
+      <section id="events-catalog">
+        <!-- Search and Filter Controls -->
+        <div class="events-controls">
+          <div class="search-box">
+            <label for="search-input">Search Events:</label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search by name or description..."
+              aria-label="Search events by name or description"
+            />
+          </div>
+
+          <div class="filter-box">
+            <label for="category-filter">Filter by Category:</label>
+            <select id="category-filter" aria-label="Filter events by category">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+
+          <div class="results-info">
+            <span id="results-count">Loading events...</span>
+          </div>
+        </div>
+
+        <!-- Events Table -->
+        <div class="table-wrapper">
+          <table id="events-table" class="events-table">
+            <thead>
+              <tr>
+                <th scope="col">Event Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+                <th scope="col">Supported Tags</th>
+                <th scope="col">Reference</th>
+              </tr>
+            </thead>
+            <tbody id="events-tbody">
+              <!-- Events will be dynamically inserted here -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="no-results" style="display: none">
+          <p>No events found matching your search criteria.</p>
+        </div>
+      </section>
+    </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -80,9 +137,19 @@
           content was carefully reviewed, fact-checked, and edited to ensure
           accuracy.
         </p>
+
+        <p class="footer-disclaimer">
+          <strong>Source Notice:</strong>
+          All HTML event data presented on this page was compiled directly from
+          W3Schools educational material. It is used here solely for academic
+          and non-commercial purposes.
+        </p>
         <p class="footer-copy">&copy; 2025 Web Insights | By Gio Al Achkar</p>
-        <p class="footer-updated">Last updated: November 11, 2025</p>
+        <p class="footer-updated">Last updated: November 12, 2025</p>
       </div>
     </footer>
+
+    <!-- Load the events script -->
+    <script src="../js/events.js"></script>
   </body>
 </html>
