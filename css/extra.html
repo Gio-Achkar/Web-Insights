@@ -648,6 +648,124 @@ for i in range(len(colors)):
           each element was replaced in place.
         </p>
       </section>
+
+      <section>
+        <h2>What Is Local Storage in Web Browsers?</h2>
+
+        <p>
+          The <code>localStorage</code> object is part of the
+          <code>Web Storage API</code>, allowing websites to store key-value
+          pairs directly inside the user's browser. Unlike <code>cookies</code>,
+          this data is not automatically sent to the server with each request,
+          which improves performance and privacy. Each website (origin) has its
+          own isolated storage space, and both keys and values are stored in
+          <code>UTF-16</code> string format
+          <a href="references.html#ref49">[49]</a>. The data saved in
+          <code>localStorage</code> persists even after closing the browser or
+          restarting the device. It remains available until it is explicitly
+          cleared by the user or removed using JavaScript code
+          <a href="references.html#ref50">[50]</a>.
+        </p>
+
+        <p>
+          Several built-in JavaScript methods for working with
+          <code>localStorage</code> are summarized in the table below:
+        </p>
+
+        <table>
+          <caption>
+            JavaScript Local Storage Methods
+          </caption>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>setItem(key, value)</code></td>
+              <td>Stores a value under the specified key.</td>
+            </tr>
+            <tr>
+              <td><code>getItem(key)</code></td>
+              <td>Retrieves the value associated with a key.</td>
+            </tr>
+            <tr>
+              <td><code>removeItem(key)</code></td>
+              <td>Deletes a specific stored item.</td>
+            </tr>
+            <tr>
+              <td><code>clear()</code></td>
+              <td>Removes all stored data for the current domain.</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" class="source">
+                Sources:
+                <a
+                  href="https://www.w3schools.com/jsref/prop_win_localstorage.asp"
+                  target="_blank"
+                  >W3Schools </a
+                >|
+                <a
+                  href="https://dev.to/ansub/what-is-local-storage-1im9"
+                  target="_blank"
+                  >DEV Community</a
+                >
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <p>
+          Complex data types such as arrays or objects cannot be stored directly
+          in
+          <code>localStorage</code>, since it only supports string values. To
+          store structured data, it is common to use
+          <code>JSON.stringify()</code>, which converts the object into a
+          JSON-formatted string before saving, and <code>JSON.parse()</code> to
+          convert it back into an object when retrieving
+          <a href="references.html#ref51">[51]</a>.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+const user = { name: "John", age: 20 };
+localStorage.setItem("user", JSON.stringify(user));  // store as string
+const retrievedUser = JSON.parse(localStorage.getItem("user"));  // parse back to object
+        </pre>
+
+        <p>
+          While <code>localStorage</code> is convenient, it should not be used
+          for sensitive data, as it can be accessed by any script running on the
+          same origin. Most browsers limit the storage size to approximately
+          5&nbsp;MB per domain, and persistence may be restricted if the user
+          disables cookies or blocks data storage
+          <a href="references.html#ref49">[49]</a>.
+        </p>
+
+        <div class="interactive-tool">
+          <div class="tool-icon">🗂️</div>
+          <div class="tool-content">
+            <h4>Test Local Storage Example</h4>
+            <p>
+              See how localStorage can remember data across page reloads by
+              counting how many times you click a button.
+            </p>
+            <a
+              href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_localstorage2"
+              target="_blank"
+              rel="noopener"
+              class="tool-link"
+            >
+              Open W3Schools Demo <span class="external-icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
