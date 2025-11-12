@@ -877,7 +877,7 @@ ul.at-rules li::before {
 }
 
 .tool-content {
-  white-space: normal; /* Allow text to wrap */
+  white-space: normal;
 }
 
 .tool-content h4 {
