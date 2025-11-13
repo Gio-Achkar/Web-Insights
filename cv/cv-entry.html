@@ -4,8 +4,511 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV Builder | Web Insights</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="cv.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    Under Development
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="../css/index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Articles</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="../css/history.html">History of the Web & Browsers</a>
+              </li>
+              <li>
+                <a href="../css/security.html">Security on the Web</a>
+              </li>
+              <li>
+                <a href="../css/mobile-first.html">Mobile-First Development</a>
+              </li>
+              <li><a href="../css/stats.html">Internet Stats</a></li>
+              <li><a href="../css/css-history.html">CSS History</a></li>
+              <li><a href="../css/js-history.html">JS History</a></li>
+              <li>
+                <a href="../ar/arabic-article.html" class="arabic-link"
+                  >تاريخ لغات البرمجة</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="../css/extra.html">Web Extras</a></li>
+          <li><a href="../schedule/index.html">Schedule</a></li>
+          <li><a href="index.html">CV</a></li>
+          <li><a href="#">CV Builder</a></li>
+          <li><a href="../wordle-clone/index.html">Wordle</a></li>
+          <li><a href="../css/events.html">Events Catalog</a></li>
+          <li><a href="../css/references.html">References</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-header">
+        <h1>CV Builder</h1>
+        <p class="subtitle">Create Your Professional CV</p>
+      </div>
+
+      <div class="cv-entry-container">
+        <!-- CV Entry Form -->
+        <section class="cv-form-section">
+          <form id="cvForm" novalidate>
+            <!-- Personal Information -->
+            <fieldset>
+              <legend>Personal Information</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullName"
+                    >Full Name <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    required
+                    placeholder="e.g., John Doe"
+                  />
+                  <span class="error-message" id="fullName-error"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="title"
+                    >Professional Title <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    required
+                    placeholder="e.g., Computer Engineering Student"
+                  />
+                  <span class="error-message" id="title-error"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email"
+                    >Email <span class="required">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="your.email@example.com"
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone"
+                    >Phone <span class="required">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="+1 234 567 8900"
+                  />
+                  <span class="error-message" id="phone-error"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="linkedin">LinkedIn</label>
+                  <input
+                    type="url"
+                    id="linkedin"
+                    name="linkedin"
+                    placeholder="https://linkedin.com/in/yourprofile"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="github">GitHub</label>
+                  <input
+                    type="url"
+                    id="github"
+                    name="github"
+                    placeholder="https://github.com/yourusername"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Professional Summary -->
+            <fieldset>
+              <legend>Professional Summary</legend>
+              <div class="form-group">
+                <label for="summary"
+                  >Summary <span class="required">*</span></label
+                >
+                <textarea
+                  id="summary"
+                  name="summary"
+                  rows="5"
+                  required
+                  placeholder="Write a brief professional summary..."
+                ></textarea>
+                <span class="error-message" id="summary-error"></span>
+              </div>
+            </fieldset>
+
+            <!-- Education -->
+            <fieldset>
+              <legend>Education</legend>
+              <div id="educationContainer">
+                <div class="education-entry">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="edu-institution-0"
+                        >Institution <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="edu-institution-0"
+                        name="edu-institution-0"
+                        required
+                        placeholder="University Name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="edu-location-0"
+                        >Location <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="edu-location-0"
+                        name="edu-location-0"
+                        required
+                        placeholder="City, Country"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="edu-degree-0"
+                        >Degree <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="edu-degree-0"
+                        name="edu-degree-0"
+                        required
+                        placeholder="Bachelor of Engineering in Computer Engineering"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="edu-year-0"
+                        >Year/Period <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="edu-year-0"
+                        name="edu-year-0"
+                        required
+                        placeholder="2024-2028 or Graduated: 2024"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="edu-gpa-0">GPA</label>
+                      <input
+                        type="text"
+                        id="edu-gpa-0"
+                        name="edu-gpa-0"
+                        placeholder="3.8 / 4.0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="edu-activities-0">Activities/Honors</label>
+                    <textarea
+                      id="edu-activities-0"
+                      name="edu-activities-0"
+                      rows="2"
+                      placeholder="IEEE Student Member, Dean's List, etc."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="add-btn" id="addEducation">
+                + Add Another Education
+              </button>
+            </fieldset>
+
+            <!-- Experience -->
+            <fieldset>
+              <legend>Experience (Optional)</legend>
+              <div id="experienceContainer">
+                <div class="experience-entry">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="exp-company-0">Company</label>
+                      <input
+                        type="text"
+                        id="exp-company-0"
+                        name="exp-company-0"
+                        placeholder="Company Name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exp-location-0">Location</label>
+                      <input
+                        type="text"
+                        id="exp-location-0"
+                        name="exp-location-0"
+                        placeholder="City, Country"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="exp-position-0">Position</label>
+                      <input
+                        type="text"
+                        id="exp-position-0"
+                        name="exp-position-0"
+                        placeholder="Software Engineer Intern"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exp-period-0">Period</label>
+                      <input
+                        type="text"
+                        id="exp-period-0"
+                        name="exp-period-0"
+                        placeholder="June 2024 - August 2024"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exp-description-0">Description</label>
+                    <textarea
+                      id="exp-description-0"
+                      name="exp-description-0"
+                      rows="3"
+                      placeholder="Describe your responsibilities and achievements..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="add-btn" id="addExperience">
+                + Add Another Experience
+              </button>
+            </fieldset>
+
+            <!-- Skills -->
+            <fieldset>
+              <legend>Skills</legend>
+              <div id="skillsContainer">
+                <div class="skill-category-entry">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="skill-category-0"
+                        >Category <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="skill-category-0"
+                        name="skill-category-0"
+                        required
+                        placeholder="e.g., Programming Languages"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="skill-items-0"
+                      >Skills (comma-separated)
+                      <span class="required">*</span></label
+                    >
+                    <textarea
+                      id="skill-items-0"
+                      name="skill-items-0"
+                      rows="2"
+                      required
+                      placeholder="Java, Python, C++"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="add-btn" id="addSkillCategory">
+                + Add Another Skill Category
+              </button>
+            </fieldset>
+
+            <!-- Projects -->
+            <fieldset>
+              <legend>Projects (Optional)</legend>
+              <div id="projectsContainer">
+                <div class="project-entry">
+                  <div class="form-group">
+                    <label for="project-name-0">Project Name</label>
+                    <input
+                      type="text"
+                      id="project-name-0"
+                      name="project-name-0"
+                      placeholder="Project Title"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="project-description-0">Description</label>
+                    <textarea
+                      id="project-description-0"
+                      name="project-description-0"
+                      rows="3"
+                      placeholder="Describe the project, technologies used, and your role..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="add-btn" id="addProject">
+                + Add Another Project
+              </button>
+            </fieldset>
+
+            <!-- Certifications -->
+            <fieldset>
+              <legend>Certifications (Optional)</legend>
+              <div id="certificationsContainer">
+                <div class="certification-entry">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="cert-name-0">Certification Name</label>
+                      <input
+                        type="text"
+                        id="cert-name-0"
+                        name="cert-name-0"
+                        placeholder="e.g., AWS Certified Developer"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="cert-issuer-0">Issuer</label>
+                      <input
+                        type="text"
+                        id="cert-issuer-0"
+                        name="cert-issuer-0"
+                        placeholder="e.g., Amazon Web Services"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cert-year-0">Year</label>
+                    <input
+                      type="text"
+                      id="cert-year-0"
+                      name="cert-year-0"
+                      placeholder="2024"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="add-btn" id="addCertification">
+                + Add Another Certification
+              </button>
+            </fieldset>
+
+            <!-- Interests -->
+            <fieldset>
+              <legend>Interests (Optional)</legend>
+              <div class="form-group">
+                <label for="interests">Interests</label>
+                <textarea
+                  id="interests"
+                  name="interests"
+                  rows="2"
+                  placeholder="Your professional interests and hobbies..."
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">
+                Generate CV Preview
+              </button>
+              <button type="button" class="reset-btn" id="resetBtn">
+                Clear Form
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- CV Preview Section -->
+        <section
+          id="cvPreviewSection"
+          class="cv-preview-section"
+          style="display: none"
+        >
+          <div class="preview-header">
+            <h2>CV Preview</h2>
+            <div class="preview-actions">
+              <button type="button" class="edit-btn" id="editBtn">Edit</button>
+              <button type="button" class="print-btn" onclick="window.print()">
+                Save as PDF
+              </button>
+            </div>
+          </div>
+
+          <div id="cvPreview" class="cv-container">
+            <!-- Dynamic CV content will be inserted here -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-disclaimer">
+          <strong>Disclaimer: </strong> This website was created for educational
+          purposes as part of a university web course. All content has been
+          carefully researched and verified to be as accurate as possible at the
+          time of writing.
+        </p>
+        <p class="footer-disclaimer">
+          <strong>AI Disclosure: </strong> AI tools (ChatGPT by OpenAI) were
+          used to assist in drafting, organizing, and proofreading parts of this
+          project. All generated content was carefully reviewed, fact-checked,
+          and edited to ensure accuracy.
+        </p>
+        <p class="footer-copy">&copy; 2025 Web Insights | By Gio Al Achkar</p>
+        <p class="footer-updated">Last updated: November 13, 2025</p>
+      </div>
+    </footer>
+
+    <script src="../js/cv.js"></script>
   </body>
 </html>
