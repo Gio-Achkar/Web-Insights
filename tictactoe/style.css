@@ -1,0 +1,295 @@
+/* Tic-Tac-Toe Specific Styles */
+
+.game-container {
+  max-width: 500px; /* Changed from 600px */
+  margin: 1.5rem auto; /* Changed from 2rem */
+  padding: 1.5rem; /* Changed from 2rem */
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Game Info Section */
+.game-info {
+  text-align: center;
+  margin-bottom: 1rem; /* Changed from 1.5rem */
+}
+
+.current-player {
+  font-size: 1.2rem; /* Changed from 1.3rem */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.player-x {
+  color: #2563eb;
+  font-size: 1.3rem; /* Changed from 1.4rem */
+}
+
+.player-o {
+  color: #dc2626;
+  font-size: 1.3rem; /* Changed from 1.4rem */
+}
+
+.game-status {
+  font-size: 1rem; /* Changed from 1.1rem */
+  color: #666;
+  min-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.game-status.winner {
+  color: #059669;
+  font-weight: bold;
+  font-size: 1.2rem; /* Changed from 1.3rem */
+}
+
+.game-status.draw {
+  color: #d97706;
+  font-weight: bold;
+  font-size: 1.2rem; /* Changed from 1.3rem */
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px; /* Changed from 10px */
+  max-width: 320px; /* Changed from 400px */
+  margin: 0 auto 1rem; /* Changed from 1.5rem */
+  padding: 8px; /* Changed from 10px */
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 2.5rem; /* Changed from 3rem */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px; /* Changed from 100px */
+  position: relative;
+}
+
+.cell:hover:not(.taken) {
+  background-color: #e5e7eb;
+  transform: scale(1.05);
+}
+
+.cell:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.cell.taken {
+  cursor: not-allowed;
+}
+
+.cell.x {
+  color: #2563eb;
+  background-color: #dbeafe;
+}
+
+.cell.o {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.cell.winning {
+  animation: pulse 0.6s ease-in-out;
+  background-color: #d1fae5 !important;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Game Controls */
+.game-controls {
+  text-align: center;
+  margin-bottom: 1rem; /* Changed from 1.5rem */
+}
+
+.reset-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.75rem; /* Changed from 0.75rem 2rem */
+  font-size: 0.95rem; /* Changed from 1rem */
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.reset-button:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+/* Score Board */
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.75rem; /* Changed from 1rem */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.score-item {
+  text-align: center;
+}
+
+.score-label {
+  display: block;
+  font-size: 0.85rem; /* Changed from 0.9rem */
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.score-value {
+  display: block;
+  font-size: 1.3rem; /* Changed from 1.5rem */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .board {
+    max-width: 280px; /* Changed from 320px */
+    gap: 6px; /* Changed from 8px */
+  }
+
+  .cell {
+    font-size: 2rem; /* Changed from 2.5rem */
+    min-height: 70px; /* Changed from 80px */
+  }
+
+  .current-player {
+    font-size: 1rem; /* Changed from 1.1rem */
+  }
+
+  .game-status {
+    font-size: 0.95rem; /* Changed from 1rem */
+  }
+
+  .reset-button {
+    padding: 0.55rem 1.25rem; /* Changed from 0.6rem 1.5rem */
+    font-size: 0.9rem; /* Changed from 0.95rem */
+  }
+
+  .score-label {
+    font-size: 0.75rem; /* Changed from 0.8rem */
+  }
+
+  .score-value {
+    font-size: 1.1rem; /* Changed from 1.3rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .board {
+    max-width: 250px; /* Changed from 280px */
+    gap: 5px; /* Changed from 6px */
+  }
+
+  .cell {
+    font-size: 1.75rem; /* Changed from 2rem */
+    min-height: 60px; /* Changed from 70px */
+  }
+
+  .score-board {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .score-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+
+  .score-label,
+  .score-value {
+    display: inline;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .cell,
+  .reset-button {
+    transition: none;
+  }
+
+  .cell.winning {
+    animation: none;
+  }
+
+  .cell:hover:not(.taken) {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cell {
+    border: 2px solid #000;
+  }
+
+  .cell.x {
+    background-color: #fff;
+    color: #00f;
+    border: 3px solid #00f;
+  }
+
+  .cell.o {
+    background-color: #fff;
+    color: #f00;
+    border: 3px solid #f00;
+  }
+}
