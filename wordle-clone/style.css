@@ -277,3 +277,76 @@ main#game-page > section#game-container {
   margin: 30px auto 0 !important; /* center horizontally */
   box-sizing: border-box;
 }
+
+/* Mobile responsive for keyboard */
+@media (max-width: 768px) {
+  #keyboard-container {
+    width: 100% !important;
+    max-width: 500px;
+    padding: 15px 10px;
+    margin: 20px auto 0 !important;
+  }
+
+  .keyboard-row {
+    gap: 4px; /* Reduce gap between keys */
+  }
+
+  .key {
+    font-size: 0.85rem;
+    padding: 14px 8px;
+    min-width: 28px; /* Smaller keys */
+    flex: 1; /* Allow keys to shrink/grow */
+  }
+
+  .key.wide-key {
+    min-width: 55px; /* Smaller wide keys */
+    font-size: 0.75rem;
+  }
+
+  /* Make letter boxes smaller on mobile */
+  .letter-box {
+    font-size: 1.8rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 1px;
+  }
+
+  /* Fix footer spacing */
+  footer {
+    margin-top: 2rem;
+  }
+
+  /* Hide back button on mobile */
+  .back-button.play-button {
+    display: none;
+  }
+
+  /* Reduce header padding on mobile */
+  #game-page .main-header {
+    padding: 2rem 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .key {
+    font-size: 0.75rem;
+    padding: 12px 4px;
+    min-width: 24px;
+  }
+
+  .key.wide-key {
+    min-width: 50px;
+    font-size: 0.7rem;
+  }
+
+  .keyboard-row {
+    gap: 3px;
+  }
+
+  .letter-box {
+    font-size: 1.5rem;
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+}

@@ -96,10 +96,7 @@ main section {
 /* Mobile responsive */
 @media (max-width: 768px) {
   .back-button {
-    right: 1rem;
-    top: 1.5rem; /* Slightly lower on mobile too */
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
+    display: none; /* Hide back button on mobile */
   }
 }
 
@@ -346,31 +343,18 @@ header nav {
   display: block;
 }
 
-/* Mobile: Make dropdown touch-friendly (optional - converts to click/tap on small screens) */
 @media (max-width: 768px) {
   .dropdown-content {
-    position: static; /* Stack below instead of absolute */
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    box-shadow: none;
-    border: none;
-    background: transparent;
-    transition: none; /* Disable animation on mobile for simplicity */
-  }
-
-  .dropdown:hover .dropdown-content {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .dropdown-content li {
-    border-bottom: none;
+    position: absolute; /* Keep it absolutely positioned */
+    left: 0;
+    top: 100%;
+    min-width: 200px;
+    max-width: 90vw; /* Prevent it from being too wide */
   }
 
   .dropdown-content a {
-    padding: 0.5rem 0.625rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
   }
 }
 

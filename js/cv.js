@@ -165,6 +165,13 @@ document.addEventListener("DOMContentLoaded", function () {
       showError("phone", "Phone number is required");
       personalInfoMissing = true;
       if (!firstErrorField) firstErrorField = phone;
+    } else if (!isValidPhone(phone.value)) {
+      showError(
+        "phone",
+        "Please enter a valid phone number (e.g., +1 234 567 8900)"
+      );
+      personalInfoMissing = true;
+      if (!firstErrorField) firstErrorField = phone;
     }
 
     if (personalInfoMissing) {
@@ -250,6 +257,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+  }
+
+  function isValidPhone(phone) {
+    const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+    return phoneRegex.test(phone);
   }
 
   // Generate CV Preview
