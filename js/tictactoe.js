@@ -202,6 +202,12 @@ cells.forEach((cell, index) => {
     if (newIndex !== index) {
       event.preventDefault();
       cells[newIndex].focus();
+
+      // Keep the board centered when navigating with arrows
+      document.getElementById("board").scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
   });
 });
