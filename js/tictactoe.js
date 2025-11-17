@@ -172,7 +172,7 @@ function resetGame() {
 
   cells[4].focus({ preventScroll: true }); // Prevents automatic scrolling
 
-  // Scroll to center the actual game board (not the container)
+  // Scroll to center the game board
   document.getElementById("board").scrollIntoView({
     behavior: "smooth",
     block: "center",
