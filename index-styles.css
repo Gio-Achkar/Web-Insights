@@ -44,21 +44,21 @@ footer {
 
 .welcome-header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   flex-shrink: 0;
   border-bottom: 1px solid hsl(208, 32%, 76%);
 }
 
 .welcome-header h1 {
   font-family: "Merriweather", serif;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: hsl(210, 29%, 24%);
   margin: 0;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: hsl(210, 20%, 35%);
   margin: 0;
   font-weight: 400;
@@ -67,7 +67,7 @@ footer {
 .split-container {
   display: flex;
   flex: 1;
-  min-height: 60vh;
+  min-height: 45vh;
   overflow: hidden;
   position: relative;
 }
@@ -116,45 +116,38 @@ footer {
 
 .section-content {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   z-index: 2;
   position: relative;
   max-width: 400px;
 }
 
-.section-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
 .section-content h2 {
   font-family: "Merriweather", serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: hsl(210, 29%, 24%);
   transition: color 0.3s ease;
 }
 
 .section-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
   color: hsl(210, 20%, 35%);
 }
 
 .section-description {
-  font-size: 0.95rem !important;
-  line-height: 1.6;
+  font-size: 0.9rem !important;
+  line-height: 1.5;
   color: hsl(210, 15%, 45%) !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .enter-text {
   display: inline-block;
   font-weight: 600;
   color: hsl(205, 100%, 40%);
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border: 2px solid transparent;
@@ -185,10 +178,6 @@ footer {
   box-shadow: -5px 0 20px hsla(0, 0%, 0%, 0.1);
 }
 
-.split-section:hover .section-icon {
-  transform: translateY(-10px) scale(1.1);
-}
-
 .split-section:hover h2 {
   color: hsl(205, 100%, 30%);
 }
@@ -202,9 +191,9 @@ footer {
 
 .welcome-footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   color: hsl(210, 15%, 45%);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   border-top: 1px solid hsl(208, 32%, 76%);
   flex-shrink: 0;
 }
@@ -216,7 +205,7 @@ footer {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .welcome-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .split-container {
@@ -229,7 +218,7 @@ footer {
   }
 
   .split-section {
-    min-height: 50vh;
+    min-height: 40vh;
   }
 
   .left-section {
@@ -237,11 +226,7 @@ footer {
   }
 
   .section-content h2 {
-    font-size: 1.7rem;
-  }
-
-  .section-icon {
-    font-size: 3rem;
+    font-size: 1.4rem;
   }
 
   .split-section:hover {
@@ -251,19 +236,19 @@ footer {
 
 @media (max-width: 480px) {
   .welcome-header {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 
   .welcome-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .section-content {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .section-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -289,7 +274,7 @@ footer {
 
 .welcome-footer {
   opacity: 0;
-  animation: fadeIn 0.6s ease-out 0.4s forwards;
+  animation: fadeIn 0.6s ease-out 0.6s forwards;
 }
 
 /* Keyframes for animations */
@@ -317,5 +302,81 @@ footer {
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+/* Additional Projects Section */
+.additional-projects {
+  background: linear-gradient(
+    to right,
+    hsl(192, 15%, 94%) 0%,
+    hsl(208, 32%, 88%) 100%
+  );
+  padding: 1.25rem 2rem;
+  border-top: 1px solid hsl(208, 32%, 76%);
+  border-bottom: 1px solid hsl(208, 32%, 76%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+}
+
+.project-section {
+  text-align: center;
+  max-width: 500px;
+  padding: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.project-section:hover {
+  transform: translateY(-5px);
+}
+
+.project-section h3 {
+  font-family: "Merriweather", serif;
+  font-size: 1.3rem;
+  color: hsl(210, 29%, 24%);
+  margin-bottom: 0.4rem;
+}
+
+.project-section p {
+  color: hsl(210, 20%, 35%);
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  background: hsl(205, 100%, 40%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid hsl(205, 100%, 40%);
+  font-size: 0.95rem;
+}
+
+.project-link:hover {
+  background: hsl(205, 100%, 35%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px hsla(205, 100%, 40%, 0.3);
+}
+
+/* Mobile responsiveness for additional projects */
+@media (max-width: 768px) {
+  .additional-projects {
+    padding: 1rem;
+  }
+
+  .project-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-section p {
+    font-size: 0.85rem;
   }
 }
