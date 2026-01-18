@@ -37,14 +37,6 @@ Web Insights aims to provide an accessible, well-organized learning resource tha
 
 ## 🧩 Interactive Tools & Additional Features
 
-### 📅 Weekly Course Schedule
-
-A complete and precisely timed weekly semester schedule (accurate to 5-minute intervals), with pop-ups showing course descriptions.
-
-### 📄 Personal CV Page
-
-A clean, formatted online CV built directly into the site.
-
 ### 📝 CV Builder Tool
 
 A dynamic, interactive CV builder that:
